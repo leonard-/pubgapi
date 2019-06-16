@@ -8,10 +8,6 @@ package net.pubgapi.model.telemetry.event;
 import com.google.gson.annotations.SerializedName;
 import net.pubgapi.model.telemetry.object.Location;
 
-/**
- *
- * @author Nature <Nature At GPL(GGWP PLAY LEAGUE)>
- */
 public class LogObjectDestroy extends TelemetryEventCharacter {
 
     @SerializedName("objectType")

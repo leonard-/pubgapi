@@ -161,6 +161,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Indicate how many requests you can perform before the api return an error
+     * @return Number of available RateLimitRemaining
      */
     public int getRateLimitRemaining() {
         return rateLimitRemaining;
@@ -168,6 +169,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Get the rate limit (how many requests you can perform per minute)
+     * @return Total number of available rateLimit
      */
     public int getRateLimit() {
         return rateLimit;
@@ -175,6 +177,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Indicate when your rate limit will be reset
+     * @return Date
      */
     public Date getRateLimitReset() {
         return rateLimitReset;

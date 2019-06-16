@@ -318,3 +318,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/git,java,linux,macos,maven,windows,eclipse,intellij+all,intellij+iml
+nbactions.xml

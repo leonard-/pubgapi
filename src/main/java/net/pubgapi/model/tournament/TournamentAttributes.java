@@ -7,12 +7,8 @@ package net.pubgapi.model.tournament;
 
 import java.time.ZonedDateTime;
 
-/**
- *
- * @author GPL_NATURE <GGWP PLAY LEAGUE>
- */
 public class TournamentAttributes {
-    
+
     private ZonedDateTime createdAt;
 
     public ZonedDateTime getCreatedAt() {

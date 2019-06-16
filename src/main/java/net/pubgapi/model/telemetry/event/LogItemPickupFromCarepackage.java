@@ -5,10 +5,6 @@
  */
 package net.pubgapi.model.telemetry.event;
 
-/**
- *
- * @author Nature <Nature At GPL(GGWP PLAY LEAGUE)>
- */
 public class LogItemPickupFromCarepackage extends TelemetryEventCharacterItem{
 
     public LogItemPickupFromCarepackage() {

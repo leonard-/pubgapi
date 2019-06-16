@@ -5,14 +5,10 @@
  */
 package net.pubgapi.model.telemetry.event;
 
-/**
- *
- * @author Nature <Nature At GPL(GGWP PLAY LEAGUE)>
- */
 public class LogVaultStart extends TelemetryEventCharacter {
 
     public LogVaultStart() {
         super();
     }
-    
+
 }

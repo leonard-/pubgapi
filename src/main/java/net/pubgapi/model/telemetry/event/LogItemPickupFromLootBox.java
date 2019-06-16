@@ -7,12 +7,8 @@ package net.pubgapi.model.telemetry.event;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- *
- * @author Nature <Nature At GPL(GGWP PLAY LEAGUE)>
- */
 public class LogItemPickupFromLootBox extends TelemetryEventCharacterItem {
-    
+
     @SerializedName("ownerTeamId")
     private int ownerTeamId;
 
@@ -23,5 +19,5 @@ public class LogItemPickupFromLootBox extends TelemetryEventCharacterItem {
     public int getOwnerTeamId() {
         return ownerTeamId;
     }
-    
+
 }
