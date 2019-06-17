@@ -35,7 +35,7 @@ public abstract class AbstractPubgClient {
 
     private static final String ACCEPT_HEADER = "application/vnd.api+json";
 
-    private static final String TELEMETRY_PACKAGE_NAME = "net.pubgapi.model.telemetry.event.";
+    private static final String TELEMETRY_PACKAGE_NAME = "com.github.gplnature.pubgapi.model.telemetry.event.";
 
     // Constant to get lifetime stats when used as the seasonId
     protected static final String LIFETIME_STATS = "lifetime";
