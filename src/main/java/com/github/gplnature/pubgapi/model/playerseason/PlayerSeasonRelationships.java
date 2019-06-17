@@ -1,5 +1,7 @@
 package com.github.gplnature.pubgapi.model.playerseason;
 
+import com.github.gplnature.pubgapi.holders.DataHolder;
+import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.season.Season;
@@ -8,22 +10,22 @@ import java.util.List;
 
 public class PlayerSeasonRelationships {
 
-    private Player player;
+    private DataHolder<Player> player;
 
-    private Match matchesSolo;
+    private DataListHolder<Match> matchesSolo;
 
     @SerializedName("matchesSoloFPP")
-    private List<Match> matchesSoloFpp;
+    private DataListHolder<Match> matchesSoloFpp;
 
-    private List<Match> matchesDuo;
+    private DataListHolder<Match> matchesDuo;
 
     @SerializedName("matchesDuoFPP")
-    private List<Match> matchesDuoFpp;
+    private DataListHolder<Match> matchesDuoFpp;
 
-    private List<Match> matchesSquad;
+    private DataListHolder<Match> matchesSquad;
 
     @SerializedName("matchesSquadFPP")
-    private List<Match> matchesSquadFpp;
+    private DataListHolder<Match> matchesSquadFpp;
 
     private Season season;
 
@@ -31,58 +33,58 @@ public class PlayerSeasonRelationships {
     }
 
     public Player getPlayer() {
-        return player;
+        return player.getData();
     }
 
-    public void setPlayer(Player player) {
+    public void setPlayer(DataHolder<Player> player) {
         this.player = player;
     }
 
-    public Match getMatchesSolo() {
-        return matchesSolo;
+    public List<Match> getMatchesSolo() {
+        return matchesSolo.getData();
     }
 
-    public void setMatchesSolo(Match matchesSolo) {
+    public void setMatchesSolo(DataListHolder<Match> matchesSolo) {
         this.matchesSolo = matchesSolo;
     }
 
     public List<Match> getMatchesSoloFpp() {
-        return matchesSoloFpp;
+        return matchesSoloFpp.getData();
     }
 
-    public void setMatchesSoloFpp(List<Match> matchesSoloFpp) {
+    public void setMatchesSoloFpp(DataListHolder<Match> matchesSoloFpp) {
         this.matchesSoloFpp = matchesSoloFpp;
     }
 
     public List<Match> getMatchesDuo() {
-        return matchesDuo;
+        return matchesDuo.getData();
     }
 
-    public void setMatchesDuo(List<Match> matchesDuo) {
+    public void setMatchesDuo(DataListHolder<Match> matchesDuo) {
         this.matchesDuo = matchesDuo;
     }
 
     public List<Match> getMatchesDuoFpp() {
-        return matchesDuoFpp;
+        return matchesDuoFpp.getData();
     }
 
-    public void setMatchesDuoFpp(List<Match> matchesDuoFpp) {
+    public void setMatchesDuoFpp(DataListHolder<Match> matchesDuoFpp) {
         this.matchesDuoFpp = matchesDuoFpp;
     }
 
     public List<Match> getMatchesSquad() {
-        return matchesSquad;
+        return matchesSquad.getData();
     }
 
-    public void setMatchesSquad(List<Match> matchesSquad) {
+    public void setMatchesSquad(DataListHolder<Match> matchesSquad) {
         this.matchesSquad = matchesSquad;
     }
 
     public List<Match> getMatchesSquadFpp() {
-        return matchesSquadFpp;
+        return matchesSquadFpp.getData();
     }
 
-    public void setMatchesSquadFpp(List<Match> matchesSquadFpp) {
+    public void setMatchesSquadFpp(DataListHolder<Match> matchesSquadFpp) {
         this.matchesSquadFpp = matchesSquadFpp;
     }
 

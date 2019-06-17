@@ -1,31 +1,32 @@
 package com.github.gplnature.pubgapi.model.player;
 
+import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.asset.Asset;
 import com.github.gplnature.pubgapi.model.match.Match;
 import java.util.List;
 
 public class PlayerRelationships {
 
-    private List<Match> matches;
+    private DataListHolder<Match> matches;
 
-    private List<Asset> assets;
+    private DataListHolder<Asset> assets;
 
     public PlayerRelationships() {
     }
 
     public List<Match> getMatches() {
-        return matches;
+        return matches.getData();
     }
 
-    public void setMatches(List<Match> matches) {
+    public void setMatches(DataListHolder<Match> matches) {
         this.matches = matches;
     }
 
     public List<Asset> getAssets() {
-        return assets;
+        return assets.getData();
     }
 
-    public void setAssets(List<Asset> assets) {
+    public void setAssets(DataListHolder<Asset> assets) {
         this.assets = assets;
     }
 }

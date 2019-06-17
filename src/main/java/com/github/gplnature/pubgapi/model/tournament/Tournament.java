@@ -1,5 +1,6 @@
 package com.github.gplnature.pubgapi.model.tournament;
 
+import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
@@ -9,14 +10,14 @@ public class Tournament extends Entity {
 
     @SerializedName("relationships")
     private TournamentRelationships tournamentRelationships;
-    
-    private List<TournamentIncluded> included;
+
+    private DataListHolder<TournamentIncluded> included;
     private Links links;
 
     public Tournament() {
         super();
     }
-    
+
     public Links getLinks() {
         return links;
     }
@@ -24,9 +25,13 @@ public class Tournament extends Entity {
     public void setLinks(Links links) {
         this.links = links;
     }
-    
+
     public List<TournamentIncluded> getIncluded() {
-        return included;
+        return included.getData();
+    }
+
+    public void setIncluded(DataListHolder<TournamentIncluded> included) {
+        this.included = included;
     }
 
     public TournamentRelationships getTournamentRelationships() {
