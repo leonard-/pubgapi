@@ -5,11 +5,10 @@ import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
 import java.util.List;
 
-public class MatchResponse {
+public class MatchResponse extends DataHolder<Match>{
 
     private List<Entity> included;
     private Links links;
-    private DataHolder<Match> match;
 
     public List<Entity> getIncluded() {
         return included;
@@ -26,13 +25,9 @@ public class MatchResponse {
     public void setLinks(Links links) {
         this.links = links;
     }
-
+    
     public Match getMatch() {
-        return match.getData();
+        return super.getData();
     }
-
-    public void setMatch(DataHolder<Match> matches) {
-        this.match = matches;
-    }
-
+    
 }
