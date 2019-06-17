@@ -20,9 +20,11 @@ This library supports the version 12.0.0 of the PUBG Official API
 <dependency>
     <groupId>com.github.gplnature</groupId>
     <artifactId>pubgapi</artifactId>
-    <version>0.0.2</version>
+    <version>{Latest}</version>
 </dependency>
 ```
+** You can find the latest version at https://bintray.com/gplnature/java-wrappers/pubgapi **
+
 ## PUBG-Java
 
 ### Current functionalities
