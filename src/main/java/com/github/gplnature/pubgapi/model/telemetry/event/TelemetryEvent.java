@@ -1,6 +1,6 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.telemetry.object.Common;
+import com.github.gplnature.pubgapi.model.telemetry.object.Common;
 import com.google.gson.annotations.SerializedName;
 
 import java.time.ZonedDateTime;

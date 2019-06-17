@@ -1,4 +1,4 @@
-package com.pubgapi.model;
+package com.github.gplnature.pubgapi.model;
 
 public class Links {
 

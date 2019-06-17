@@ -1,6 +1,7 @@
-package com.pubgapi.api;
+package com.github.gplnature.pubgapi.api;
 
-import com.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.exception.PubgClientException;
+
 
 public interface ResponseCallback<T> {
 

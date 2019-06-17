@@ -1,6 +1,6 @@
-package com.pubgapi.model.leaderboard;
+package com.github.gplnature.pubgapi.model.leaderboard;
 
-import com.pubgapi.model.GameMode;
+import com.github.gplnature.pubgapi.model.GameMode;
 
 public class LeaderboardAttributes {
 

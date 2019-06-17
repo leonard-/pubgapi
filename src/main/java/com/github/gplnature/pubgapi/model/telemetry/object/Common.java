@@ -1,4 +1,4 @@
-package com.pubgapi.model.telemetry.object;
+package com.github.gplnature.pubgapi.model.telemetry.object;
 
 public class Common {
 

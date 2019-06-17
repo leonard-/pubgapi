@@ -1,7 +1,7 @@
-package com.pubgapi.model.playerseason;
+package com.github.gplnature.pubgapi.model.playerseason;
 
+import com.github.gplnature.pubgapi.model.Links;
 import com.google.gson.annotations.SerializedName;
-import com.pubgapi.model.Links;
 
 public class PlayerSeason {
 

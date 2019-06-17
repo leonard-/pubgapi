@@ -1,7 +1,7 @@
-package com.pubgapi.model.leaderboard;
+package com.github.gplnature.pubgapi.model.leaderboard;
 
+import com.github.gplnature.pubgapi.model.player.Player;
 import java.util.List;
-import com.pubgapi.model.player.Player;
 
 public class LeaderboardRelationships {
 

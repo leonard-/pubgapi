@@ -1,12 +1,12 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.telemetry.object.Character;
+import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.google.gson.annotations.SerializedName;
 
 public class LogPlayerRevive extends TelemetryEvent {
 
     @SerializedName("reviver")
-    private Character character;
+    private Character Character;
 
     @SerializedName("victim")
     private Character victim;
@@ -16,11 +16,11 @@ public class LogPlayerRevive extends TelemetryEvent {
     }
 
     public Character getCharacter() {
-        return character;
+        return Character;
     }
 
-    public void setCharacter(Character character) {
-        this.character = character;
+    public void setCharacter(Character Character) {
+        this.Character = Character;
     }
 
     public Character getVictim() {

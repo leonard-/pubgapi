@@ -1,8 +1,8 @@
-package com.pubgapi.model.playerseason;
+package com.github.gplnature.pubgapi.model.playerseason;
 
-import com.pubgapi.model.match.Match;
-import com.pubgapi.model.player.Player;
-import com.pubgapi.model.season.Season;
+import com.github.gplnature.pubgapi.model.match.Match;
+import com.github.gplnature.pubgapi.model.player.Player;
+import com.github.gplnature.pubgapi.model.season.Season;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 

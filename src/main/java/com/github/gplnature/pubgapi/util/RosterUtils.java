@@ -1,12 +1,12 @@
-package com.pubgapi.util;
+package com.github.gplnature.pubgapi.util;
 
+import com.github.gplnature.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.participant.Participant;
+import com.github.gplnature.pubgapi.model.roster.Roster;
+import com.github.gplnature.pubgapi.model.roster.RosterRelationships;
 import java.util.List;
 import java.util.stream.Collectors;
-import com.pubgapi.exception.PubgClientException;
-import com.pubgapi.model.generic.Entity;
-import com.pubgapi.model.participant.Participant;
-import com.pubgapi.model.roster.Roster;
-import com.pubgapi.model.roster.RosterRelationships;
 
 public class RosterUtils {
 

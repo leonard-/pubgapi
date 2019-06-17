@@ -1,9 +1,9 @@
-package com.pubgapi.model.tournament;
+package com.github.gplnature.pubgapi.model.tournament;
 
-import com.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.Links;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
-import com.pubgapi.model.Links;
 
 public class Tournament extends Entity {
 

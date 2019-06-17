@@ -1,4 +1,4 @@
-package com.pubgapi.model.roster;
+package com.github.gplnature.pubgapi.model.roster;
 
 public class RosterStats {
 

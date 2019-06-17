@@ -1,4 +1,4 @@
-package com.pubgapi.model.leaderboard;
+package com.github.gplnature.pubgapi.model.leaderboard;
 
 public class LeaderboardPlayerAttributesStats {
 

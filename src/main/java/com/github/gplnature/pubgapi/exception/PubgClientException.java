@@ -1,4 +1,4 @@
-package com.pubgapi.exception;
+package com.github.gplnature.pubgapi.exception;
 
 public class PubgClientException extends Exception {
 

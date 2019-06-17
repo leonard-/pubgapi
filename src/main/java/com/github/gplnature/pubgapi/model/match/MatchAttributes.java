@@ -1,9 +1,8 @@
-package com.pubgapi.model.match;
+package com.github.gplnature.pubgapi.model.match;
 
-import com.pubgapi.model.GameMode;
-import com.pubgapi.model.Map;
-import com.pubgapi.model.SeasonState;
-
+import com.github.gplnature.pubgapi.model.GameMode;
+import com.github.gplnature.pubgapi.model.Map;
+import com.github.gplnature.pubgapi.model.SeasonState;
 import java.time.ZonedDateTime;
 
 public class MatchAttributes {

@@ -1,4 +1,4 @@
-package com.pubgapi.model.playerseason;
+package com.github.gplnature.pubgapi.model.playerseason;
 
 import com.google.gson.annotations.SerializedName;
 

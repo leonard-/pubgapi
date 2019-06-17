@@ -1,21 +1,21 @@
-package com.pubgapi.api;
+package com.github.gplnature.pubgapi.api;
 
-import com.pubgapi.exception.PubgClientException;
-import com.pubgapi.model.GameMode;
-import com.pubgapi.model.Platform;
-import com.pubgapi.model.PlatformRegion;
-import com.pubgapi.model.leaderboard.Leaderboard;
-import com.pubgapi.model.match.MatchResponse;
-import com.pubgapi.model.player.Player;
-import com.pubgapi.model.playerseason.PlayerSeason;
-import com.pubgapi.model.sample.Sample;
-import com.pubgapi.model.season.Season;
-import com.pubgapi.model.status.Status;
-import com.pubgapi.model.telemetry.Telemetry;
-import com.pubgapi.model.telemetry.event.TelemetryEvent;
-import com.pubgapi.model.tournament.Tournament;
-import com.pubgapi.util.RetrofitUtil;
 
+import com.github.gplnature.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.model.GameMode;
+import com.github.gplnature.pubgapi.model.Platform;
+import com.github.gplnature.pubgapi.model.PlatformRegion;
+import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
+import com.github.gplnature.pubgapi.model.match.MatchResponse;
+import com.github.gplnature.pubgapi.model.player.Player;
+import com.github.gplnature.pubgapi.model.playerseason.PlayerSeason;
+import com.github.gplnature.pubgapi.model.sample.Sample;
+import com.github.gplnature.pubgapi.model.season.Season;
+import com.github.gplnature.pubgapi.model.status.Status;
+import com.github.gplnature.pubgapi.model.telemetry.Telemetry;
+import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
+import com.github.gplnature.pubgapi.model.tournament.Tournament;
+import com.github.gplnature.pubgapi.util.RetrofitUtil;
 import java.time.Instant;
 import java.util.List;
 
@@ -29,8 +29,8 @@ public class PubgClient extends AbstractPubgClient {
      * Get the list of players matching the playerNames in the provided platform
      * @param platform Platform (example: Platform.STEAM)
      * @param playersNames PUBG PLAYER NAMES
-     * @return Players by playerNames
-     * @throws com.pubgapi.exception.PubgClientException 
+     * @return Players by playerNames 
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException 
      */
     public List<Player> getPlayersByNames(Platform platform, String... playersNames)
             throws PubgClientException {
@@ -45,7 +45,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param platform Platform (example: Platform.STEAM)
      * @param playerIds PUBG PLAYER IDS
      * @return Players by ids
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public List<Player> getPlayersByIds(Platform platform, String... playerIds)
             throws PubgClientException {
@@ -59,8 +59,8 @@ public class PubgClient extends AbstractPubgClient {
      * Get a player given its Id and platform
      * @param platform Platform (example: Platform.STEAM)
      * @param id PUBG PLAYER ID
-     * @return Player by id
-     * @throws com.pubgapi.exception.PubgClientException 
+     * @return Player by id 
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException 
      */
     public Player getPlayer(Platform platform, String id) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getPlayer(platform.toString(), id));
@@ -69,7 +69,7 @@ public class PubgClient extends AbstractPubgClient {
     /**
      * Return the status of the API
      * @return status
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public Status getStatus() throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getStatus());
@@ -80,7 +80,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param platform Platform (example: Platform.STEAM)
      * @param id match id
      * @return MatchResponse by matchid
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public MatchResponse getMatch(Platform platform, String id) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getMatch(platform.toString(), id));
@@ -90,7 +90,7 @@ public class PubgClient extends AbstractPubgClient {
      * Get the telemetry from the provided link
      * @param link Telemetry link
      * @return Telemetry data by Telemetrylink
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public Telemetry getTelemetry(String link) throws PubgClientException {
         List<TelemetryEvent> telemetryEvents = RetrofitUtil.getResponse(pubgInterface.getTelemetry(link));
@@ -105,7 +105,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param platformRegion PlatformRegion (example: PlatformRegion.PC_JP)
      * @param createdAtStart 
      * @return 
-     * @throws com.pubgapi.exception.PubgClientException 
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException 
      */
     public Sample getSamples(PlatformRegion platformRegion, Instant createdAtStart)
             throws PubgClientException {
@@ -117,7 +117,7 @@ public class PubgClient extends AbstractPubgClient {
      * Get a list of available seasons.
      * @param platformRegion PlatformRegion (example: PlatformRegion.PC_JP)
      * @return Season by PlatformRegion
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public List<Season> getSeasons(PlatformRegion platformRegion) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getSeasons(platformRegion.toString()));
@@ -127,7 +127,7 @@ public class PubgClient extends AbstractPubgClient {
      * Get a list of available seasons.
      * @param platform Platform (example: Platform.STEAM)
      * @return Seasons data by platform
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public List<Season> getSeasons(Platform platform) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getSeasons(platform.toString()));
@@ -154,7 +154,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param playerId PUBG PLAYER IDS
      * @param seasonId SeasonID (example: Season.getId())
      * @return PlayerSeason data by playerId with seasonId
-     * @throws com.pubgapi.exception.PubgClientException 
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException 
      */
     public PlayerSeason getPlayerSeason(PlatformRegion platformRegion, String playerId,
                                                             String seasonId) throws PubgClientException {
@@ -170,7 +170,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param playerId PUBG PLAYER IDS
      * @param seasonId SeasonID (example: Season.getId())
      * @return PlayerSeason data by playerId with seasonId
-     * @throws com.pubgapi.exception.PubgClientException 
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException 
      */
     public PlayerSeason getPlayerSeason(Platform platform, String playerId,
                                                             String seasonId) throws PubgClientException {
@@ -181,7 +181,7 @@ public class PubgClient extends AbstractPubgClient {
     /**
      * Get list of tournaments
      * @return Tournaments Data
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public Tournament getTournaments() throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getTournaments());
@@ -191,7 +191,7 @@ public class PubgClient extends AbstractPubgClient {
      * Get a tournament by id
      * @param id Tournament id
      * @return Tournaments Data by id
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public Tournament getTournament(String id) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getTournament(id));
@@ -203,7 +203,7 @@ public class PubgClient extends AbstractPubgClient {
      * @param gameMode GamMode (example: GameMode.SOLO)
      * @param page page
      * @return Leaderboard by gameMode with platform, page
-     * @throws com.pubgapi.exception.PubgClientException
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
     public Leaderboard getLeaderboard(Platform platform, GameMode gameMode, int page)
             throws PubgClientException {

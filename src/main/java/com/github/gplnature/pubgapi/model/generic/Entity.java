@@ -1,4 +1,4 @@
-package com.pubgapi.model.generic;
+package com.github.gplnature.pubgapi.model.generic;
 
 public abstract class Entity {
 

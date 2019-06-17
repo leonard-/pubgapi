@@ -1,4 +1,4 @@
-package com.pubgapi.model.participant;
+package com.github.gplnature.pubgapi.model.participant;
 
 import com.google.gson.annotations.SerializedName;
 

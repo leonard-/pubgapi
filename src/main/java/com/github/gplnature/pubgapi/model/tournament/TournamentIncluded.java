@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pubgapi.model.tournament;
+package com.github.gplnature.pubgapi.model.tournament;
 
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
-import com.pubgapi.model.generic.Entity;
 
 public class TournamentIncluded extends Entity{
     @SerializedName("attributes")

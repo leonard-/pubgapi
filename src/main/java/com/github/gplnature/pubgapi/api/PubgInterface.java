@@ -1,14 +1,14 @@
-package com.pubgapi.api;
+package com.github.gplnature.pubgapi.api;
 
-import com.pubgapi.model.leaderboard.Leaderboard;
-import com.pubgapi.model.match.MatchResponse;
-import com.pubgapi.model.player.Player;
-import com.pubgapi.model.playerseason.PlayerSeason;
-import com.pubgapi.model.sample.Sample;
-import com.pubgapi.model.season.Season;
-import com.pubgapi.model.status.Status;
-import com.pubgapi.model.telemetry.event.TelemetryEvent;
-import com.pubgapi.model.tournament.Tournament;
+import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
+import com.github.gplnature.pubgapi.model.match.MatchResponse;
+import com.github.gplnature.pubgapi.model.player.Player;
+import com.github.gplnature.pubgapi.model.playerseason.PlayerSeason;
+import com.github.gplnature.pubgapi.model.sample.Sample;
+import com.github.gplnature.pubgapi.model.season.Season;
+import com.github.gplnature.pubgapi.model.status.Status;
+import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
+import com.github.gplnature.pubgapi.model.tournament.Tournament;
 import retrofit2.Call;
 import retrofit2.http.*;
 

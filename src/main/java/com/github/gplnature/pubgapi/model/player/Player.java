@@ -1,8 +1,8 @@
-package com.pubgapi.model.player;
+package com.github.gplnature.pubgapi.model.player;
 
+import com.github.gplnature.pubgapi.model.Links;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
-import com.pubgapi.model.Links;
-import com.pubgapi.model.generic.Entity;
 
 public class Player extends Entity {
 

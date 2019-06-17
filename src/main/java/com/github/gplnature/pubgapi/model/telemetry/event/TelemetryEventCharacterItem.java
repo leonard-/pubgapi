@@ -1,6 +1,6 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.telemetry.object.Item;
+import com.github.gplnature.pubgapi.model.telemetry.object.Item;
 
 /**
  * TelemetryEvent including a character and an item

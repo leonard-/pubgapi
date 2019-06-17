@@ -1,4 +1,4 @@
-package com.pubgapi.model.sample;
+package com.github.gplnature.pubgapi.model.sample;
 
 import java.time.ZonedDateTime;
 

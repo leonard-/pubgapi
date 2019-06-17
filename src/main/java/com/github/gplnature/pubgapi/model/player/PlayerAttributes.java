@@ -1,4 +1,4 @@
-package com.pubgapi.model.player;
+package com.github.gplnature.pubgapi.model.player;
 
 import java.time.ZonedDateTime;
 

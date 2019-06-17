@@ -1,23 +1,23 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.telemetry.object.Character;
+import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 
 /**
- * TelemetryEvent including a character
+ * TelemetryEvent including a CharacterObj
  */
 public abstract class TelemetryEventCharacter extends TelemetryEvent {
 
-    private Character character;
+    private Character Character;
 
     public TelemetryEventCharacter() {
         super();
     }
 
     public Character getCharacter() {
-        return character;
+        return Character;
     }
 
-    public void setCharacter(Character character) {
-        this.character = character;
+    public void setCharacter(Character Character) {
+        this.Character = Character;
     }
 }

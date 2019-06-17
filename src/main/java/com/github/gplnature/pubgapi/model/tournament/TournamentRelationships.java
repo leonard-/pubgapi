@@ -1,7 +1,7 @@
-package com.pubgapi.model.tournament;
+package com.github.gplnature.pubgapi.model.tournament;
 
+import com.github.gplnature.pubgapi.model.match.Match;
 import java.util.List;
-import com.pubgapi.model.match.Match;
 
 public class TournamentRelationships {
 

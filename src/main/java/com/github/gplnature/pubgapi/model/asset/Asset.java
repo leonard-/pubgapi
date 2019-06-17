@@ -1,7 +1,7 @@
-package com.pubgapi.model.asset;
+package com.github.gplnature.pubgapi.model.asset;
 
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
-import com.pubgapi.model.generic.Entity;
 
 public class Asset extends Entity {
 

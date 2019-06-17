@@ -1,4 +1,4 @@
-package com.pubgapi.model.asset;
+package com.github.gplnature.pubgapi.model.asset;
 
 import com.google.gson.annotations.SerializedName;
 

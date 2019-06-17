@@ -1,6 +1,6 @@
-package com.pubgapi.model.status;
+package com.github.gplnature.pubgapi.model.status;
 
-import com.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 
 public class Status extends Entity {
 

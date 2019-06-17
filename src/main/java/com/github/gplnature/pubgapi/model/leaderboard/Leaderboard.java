@@ -1,9 +1,8 @@
-package com.pubgapi.model.leaderboard;
+package com.github.gplnature.pubgapi.model.leaderboard;
 
-import com.pubgapi.model.Links;
-import com.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.Links;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class Leaderboard extends Entity {

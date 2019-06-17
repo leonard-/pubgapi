@@ -1,14 +1,14 @@
-package com.pubgapi.api;
+package com.github.gplnature.pubgapi.api;
 
-import com.pubgapi.model.asset.Asset;
-import com.pubgapi.model.generic.Entity;
-import com.pubgapi.model.match.Match;
-import com.pubgapi.model.participant.Participant;
-import com.pubgapi.model.player.Player;
-import com.pubgapi.model.roster.Roster;
-import com.pubgapi.model.status.Status;
-import com.pubgapi.model.telemetry.event.TelemetryEvent;
-import com.pubgapi.model.tournament.Tournament;
+import com.github.gplnature.pubgapi.model.asset.Asset;
+import com.github.gplnature.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.match.Match;
+import com.github.gplnature.pubgapi.model.participant.Participant;
+import com.github.gplnature.pubgapi.model.player.Player;
+import com.github.gplnature.pubgapi.model.roster.Roster;
+import com.github.gplnature.pubgapi.model.status.Status;
+import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
+import com.github.gplnature.pubgapi.model.tournament.Tournament;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
@@ -18,7 +18,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZonedDateTime;

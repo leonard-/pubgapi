@@ -1,8 +1,8 @@
-package com.pubgapi.model.match;
+package com.github.gplnature.pubgapi.model.match;
 
+import com.github.gplnature.pubgapi.model.asset.Asset;
+import com.github.gplnature.pubgapi.model.roster.Roster;
 import java.util.List;
-import com.pubgapi.model.asset.Asset;
-import com.pubgapi.model.roster.Roster;
 
 public class MatchRelationships {
 

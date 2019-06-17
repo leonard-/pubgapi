@@ -1,9 +1,9 @@
-package com.pubgapi.util;
+package com.github.gplnature.pubgapi.util;
 
 
+import com.github.gplnature.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.model.season.Season;
 import java.util.List;
-import com.pubgapi.exception.PubgClientException;
-import com.pubgapi.model.season.Season;
 
 public class SeasonUtils {
 

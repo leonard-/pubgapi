@@ -1,8 +1,8 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.telemetry.object.Character;
-import com.pubgapi.model.telemetry.object.Item;
-import com.pubgapi.model.telemetry.object.Vehicle;
+import com.github.gplnature.pubgapi.model.telemetry.object.Character;
+import com.github.gplnature.pubgapi.model.telemetry.object.Item;
+import com.github.gplnature.pubgapi.model.telemetry.object.Vehicle;
 import com.google.gson.annotations.SerializedName;
 
 public class LogPlayerAttack extends TelemetryEvent {

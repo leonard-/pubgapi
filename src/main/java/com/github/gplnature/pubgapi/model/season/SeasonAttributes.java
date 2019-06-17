@@ -1,4 +1,4 @@
-package com.pubgapi.model.season;
+package com.github.gplnature.pubgapi.model.season;
 
 import com.google.gson.annotations.SerializedName;
 

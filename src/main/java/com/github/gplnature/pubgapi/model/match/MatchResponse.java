@@ -1,9 +1,8 @@
-package com.pubgapi.model.match;
+package com.github.gplnature.pubgapi.model.match;
 
-import com.pubgapi.model.generic.Entity;
-
+import com.github.gplnature.pubgapi.model.Links;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import java.util.List;
-import com.pubgapi.model.Links;
 
 public class MatchResponse {
 
@@ -34,5 +33,5 @@ public class MatchResponse {
     public void setMatch(Match matches) {
         this.match = matches;
     }
-    
+
 }

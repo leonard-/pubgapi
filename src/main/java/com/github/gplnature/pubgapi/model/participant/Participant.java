@@ -1,7 +1,7 @@
-package com.pubgapi.model.participant;
+package com.github.gplnature.pubgapi.model.participant;
 
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
-import com.pubgapi.model.generic.Entity;
 
 public class Participant extends Entity {
 

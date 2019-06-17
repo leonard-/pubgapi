@@ -1,6 +1,6 @@
-package com.pubgapi.model.sample;
+package com.github.gplnature.pubgapi.model.sample;
 
-import com.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.google.gson.annotations.SerializedName;
 
 public class Sample extends Entity {

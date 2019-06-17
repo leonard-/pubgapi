@@ -1,4 +1,4 @@
-package com.pubgapi.util;
+package com.github.gplnature.pubgapi.util;
 
 import java.util.List;
 import java.util.stream.Collectors;

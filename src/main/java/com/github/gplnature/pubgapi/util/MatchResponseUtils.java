@@ -1,15 +1,15 @@
-package com.pubgapi.util;
+package com.github.gplnature.pubgapi.util;
 
+import com.github.gplnature.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.model.asset.Asset;
+import com.github.gplnature.pubgapi.model.generic.Entity;
+import com.github.gplnature.pubgapi.model.match.Match;
+import com.github.gplnature.pubgapi.model.match.MatchRelationships;
+import com.github.gplnature.pubgapi.model.match.MatchResponse;
+import com.github.gplnature.pubgapi.model.participant.Participant;
+import com.github.gplnature.pubgapi.model.roster.Roster;
 import java.util.List;
 import java.util.stream.Collectors;
-import com.pubgapi.exception.PubgClientException;
-import com.pubgapi.model.asset.Asset;
-import com.pubgapi.model.generic.Entity;
-import com.pubgapi.model.match.Match;
-import com.pubgapi.model.match.MatchRelationships;
-import com.pubgapi.model.match.MatchResponse;
-import com.pubgapi.model.participant.Participant;
-import com.pubgapi.model.roster.Roster;
 
 public class MatchResponseUtils {
 

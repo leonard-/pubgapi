@@ -1,8 +1,8 @@
-package com.pubgapi.model.player;
+package com.github.gplnature.pubgapi.model.player;
 
+import com.github.gplnature.pubgapi.model.asset.Asset;
+import com.github.gplnature.pubgapi.model.match.Match;
 import java.util.List;
-import com.pubgapi.model.asset.Asset;
-import com.pubgapi.model.match.Match;
 
 public class PlayerRelationships {
 

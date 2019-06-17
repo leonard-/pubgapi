@@ -1,7 +1,6 @@
-package com.pubgapi.model.telemetry;
+package com.github.gplnature.pubgapi.model.telemetry;
 
-import com.pubgapi.model.telemetry.event.TelemetryEvent;
-
+import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
 import java.util.List;
 
 public class Telemetry {

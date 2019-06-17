@@ -1,7 +1,7 @@
-package com.pubgapi.model.roster;
+package com.github.gplnature.pubgapi.model.roster;
 
+import com.github.gplnature.pubgapi.model.participant.Participant;
 import java.util.List;
-import com.pubgapi.model.participant.Participant;
 
 public class RosterRelationships {
 

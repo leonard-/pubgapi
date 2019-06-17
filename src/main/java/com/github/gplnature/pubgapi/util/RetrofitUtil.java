@@ -1,7 +1,7 @@
-package com.pubgapi.util;
+package com.github.gplnature.pubgapi.util;
 
-import com.pubgapi.api.ResponseCallback;
-import com.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.api.ResponseCallback;
+import com.github.gplnature.pubgapi.exception.PubgClientException;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,4 +1,4 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
 public class LogItemDrop extends TelemetryEventCharacterItem {
 

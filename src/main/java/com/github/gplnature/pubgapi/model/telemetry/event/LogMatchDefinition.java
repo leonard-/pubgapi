@@ -1,6 +1,6 @@
-package com.pubgapi.model.telemetry.event;
+package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.pubgapi.model.SeasonState;
+import com.github.gplnature.pubgapi.model.SeasonState;
 import com.google.gson.annotations.SerializedName;
 
 public class LogMatchDefinition extends TelemetryEvent {
