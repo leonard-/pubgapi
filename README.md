@@ -1,5 +1,5 @@
-# PUBG-Java
-Java wrapper and utilities for the PlayerUnknown's Battlegrounds (PUBG) API.
+# PUBG-API
+Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 # Contact Me
 - [Discord] GPL_Nature#5497
@@ -23,20 +23,44 @@ This library supports the version 12.0.0 of the PUBG Official API
     <version>{Latest}</version>
 </dependency>
 ```
-** You can find the latest version at https://bintray.com/gplnature/java-wrappers/pubgapi **
+**You can find the latest version at https://bintray.com/gplnature/java-wrappers/pubgapi**
+
+You can use the pubgapi on the JCenter and the Maven Central.
+
+- JCenter
+```xml
+<repository>
+    <id>jcenter</id>
+    <name>jcenter-bintray</name>
+    <url>http://jcenter.bintray.com</url>
+</repository>
+```
+- Central Maven
+```xml
+<repository>
+    <id>central</id>
+    <name>Central Repository</name>
+    <url>https://repo.maven.apache.org/maven2</url>	
+</repository>
+```
 
 ## PUBG-Java
 
-### Current functionalities
-- Get the status of the API
-- Search for one or many players
-- Search for a match
-- Access to the telemetry of a match
-- List the seasons
-- Get the stats of a player for a season
-- Get information about tournaments
+### Configuration
+You can also provide an application.conf file as the project use **[typesafe](https://github.com/lightbend/config)** for the configuration 
 
-### Api call example
+**Make reference.conf file in src/main/resource in your project folder as shown below.**
+```
+{
+    apiKey: Your Api key
+}
+```
+### Make API Key
+You can get an API key from **[PUBG Developer Site](https://developer.playbattlegrounds.com/)**
+
+
+### API Call Example
+**[PUBG API Documentation](https://documentation.pubg.com/en/introduction.html)**
 To search for player(s) by name(s) :
 ```java
 public static final void main(String[] args) throws PubgClientException {
@@ -44,29 +68,31 @@ public static final void main(String[] args) throws PubgClientException {
     PubgClient pubgClient = new PubgClient();
 
     // Get a list of players using their names in-game
-    List<Player> playerList = pubgClient.getPlayersByNames(Platform.STEAM, <name1>, <name2>, <name3>);
+    List<Player> playerList = pubgClient.getPlayersByNames(Platform.STEAM, "name", "name2");
     LOGGER.info(playerList.get(0).getPlayerAttributes().getName());
 
     // Get a list of players using their id in-game
-    List<Player> playerList = pubgClient.getPlayersByIds(Platform.STEAM, <id1>, <id2>, <id3>);
+    List<Player> playerList = pubgClient.getPlayersByIds(Platform.STEAM, "id", "id2");
     LOGGER.info(playerList.get(0).getPlayerAttributes().getName());
 
     // Get a single player using its id
-    Player player = pubgClient.getPlayer(Platform.STEAM, <idPlayer>);
+    Player player = pubgClient.getPlayer(Platform.STEAM, "id");
     LOGGER.info(player.getPlayerAttributes().getName());
     LOGGER.info(player.getPlayerRelationships().getMatches().get(0).getId());
+    // Player documentation
+    // [https://documentation.pubg.com/en/players-endpoint.html]
 
     // Get a single match using its id
-    MatchResponse match = pubgClient.getMatch(Platform.STEAM, <idMatch>);
+    // [https://documentation.pubg.com/en/matches-endpoint.html]
+    MatchResponse match = pubgClient.getMatch(Platform.STEAM, "matchid");
     LOGGER.info(match.getData().getMatchAttributes().getGameMode());
 
-    // Get the telemetry for a match
-    Telemetry telemetry = pubgClient.getTelemetry(<telemetryLinkUrl>);
+    // Get the telemetry for a match 
+    // [https://documentation.pubg.com/en/telemetry.html]
+    Telemetry telemetry = pubgClient.getTelemetry("Telemetry URL");
     LOGGER.info("{}", telemetry.getTelemetryEvents().size());
 }
 ```
-
-For more example, you can check out the PubgClientSample.java class
 
 ### Rate Limit
 The PUBG API has a rate limit (currently it's 10 requests / minute). You can get information about this limit using the methods :
@@ -77,10 +103,8 @@ getRateLimitReset()
 ```
 in your PUBG client.
 
-### Configuration
-The only thing you have to do is to set your PUBG Api Key (that you can find by registering here : https://developer.playbattlegrounds.com/) in the reference.conf file.
-You can also provide an application.conf file as the project use typesafe for the configuration (https://github.com/lightbend/config).
-
 ## Links
 - [PUBG developer portal](https://developer.playbattlegrounds.com/)
 - [Mautini pubg java](https://github.com/mautini/pubgjava)
+
+## Promotion
