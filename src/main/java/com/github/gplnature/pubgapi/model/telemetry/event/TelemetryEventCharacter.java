@@ -7,17 +7,17 @@ import com.github.gplnature.pubgapi.model.telemetry.object.Character;
  */
 public abstract class TelemetryEventCharacter extends TelemetryEvent {
 
-    private Character Character;
+    private Character character;
 
     public TelemetryEventCharacter() {
         super();
     }
 
     public Character getCharacter() {
-        return Character;
+        return character;
     }
 
     public void setCharacter(Character Character) {
-        this.Character = Character;
+        this.character = Character;
     }
 }
