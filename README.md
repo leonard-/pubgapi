@@ -23,7 +23,7 @@ This library supports the version 12.0.0 of the PUBG Official API
     <version>{Latest}</version>
 </dependency>
 ```
-**You can find the latest version at https://bintray.com/gplnature/java-wrappers/pubgapi**
+[ ![Download](https://api.bintray.com/packages/gplnature/java-wrappers/pubgapi/images/download.svg) ](https://bintray.com/gplnature/java-wrappers/pubgapi/_latestVersion)
 
 You can use the pubgapi on the JCenter and the Maven Central.
 
