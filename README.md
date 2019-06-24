@@ -121,4 +121,4 @@ contact@ggwp.co.kr
 
 For more information : 
 https://ggwp.imweb.me/
-https://discor
+https://discord.gg/3VaNJeX
