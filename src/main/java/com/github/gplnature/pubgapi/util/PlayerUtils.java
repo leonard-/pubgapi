@@ -31,7 +31,7 @@ public class PlayerUtils {
             throw new PubgClientException("Unable to get the relationships of the player");
         }
 
-        List<Match> matchs = playerRelationships.getMatches();
+        List<Entity> matchs = playerRelationships.getMatches();
         if (matchs == null || matchs == null) {
             throw new PubgClientException("Unable to get the matchs of the player");
         }

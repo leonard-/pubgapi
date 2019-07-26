@@ -155,30 +155,28 @@ public class PubgClient extends AbstractPubgClient {
                 pubgInterface.getPlayerSeason(platform.toString(), playerId, LIFETIME_STATS), responseCallback
         );
     }
+    
+    /**
+     * Get lifetime stats (as of division.bro.official.pc-2018-01) for a single
+     * player (PC only)
+     *
+     * @param responseCallback
+     * @param platform Platform (example: Platform.STEAM)
+     * @param gameMode PUBG GameMode
+     */
+    public void getPlayersLifetimeStat(ResponseCallback<DataHolder<PlayerSeason>> responseCallback,
+            Platform platform, GameMode gameMode) {
+        RetrofitUtil.getResponseAsync(
+                pubgInterface.getSeasonPlayers(platform.toString(), gameMode.toString(), LIFETIME_STATS), responseCallback
+        );
+    }
 
     /**
      * Get season information for a single player. This method must be used for
      * Xbox or PC seasons before 18/10/03. After this date, use
      * {@link #getPlayerSeason(Platform, String, String)}
      *
-     * @param platformRegion PlatformRegion (example: PlatformRegion.PC_JP)
-     * @param playerId PUBG PLAYER IDS
-     * @param seasonId SeasonID (example: Season.getId())
-     * @return PlayerSeason data by playerId with seasonId
-     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
-     */
-    public PlayerSeason getPlayerSeason(PlatformRegion platformRegion, String playerId,
-            String seasonId) throws PubgClientException {
-
-        return RetrofitUtil.getResponse(pubgInterface.getPlayerSeason(platformRegion.toString(), playerId, seasonId)).getData();
-    }
-
-    /**
-     * Get season information for a single player. This method must be used for
-     * PC seasons after 18/10/03. Before this date, use
-     * {@link #getPlayerSeason(PlatformRegion, String, String)}
-     *
-     * @param platform Platform (example: Platform.STEAM)
+     * @param platform PlatformRegion (example: Platform.STEAM)
      * @param playerId PUBG PLAYER IDS
      * @param seasonId SeasonID (example: Season.getId())
      * @return PlayerSeason data by playerId with seasonId
@@ -188,6 +186,23 @@ public class PubgClient extends AbstractPubgClient {
             String seasonId) throws PubgClientException {
 
         return RetrofitUtil.getResponse(pubgInterface.getPlayerSeason(platform.toString(), playerId, seasonId)).getData();
+    }
+    
+    /**
+     * Get season information for a single player. This method must be used for
+     * Xbox or PC seasons before 18/10/03. After this date, use
+     * {@link #getPlayerSeason(Platform, String, String)}
+     *
+     * @param platform PlatformRegion (example: Platform.STEAM)
+     * @param gameMode PUBG GAME MODE (example: GameMode.SOLO)
+     * @param seasonId SeasonID (example: Season.getId())
+     * @return PlayerSeason data by playerId with seasonId
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public PlayerSeason getSeasonPlayers(Platform platform, GameMode gameMode,
+            String seasonId) throws PubgClientException {
+
+        return RetrofitUtil.getResponse(pubgInterface.getSeasonPlayers(platform.toString(), gameMode.toString(), seasonId)).getData();
     }
 
     /**

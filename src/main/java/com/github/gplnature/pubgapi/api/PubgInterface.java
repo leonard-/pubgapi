@@ -39,6 +39,11 @@ public interface PubgInterface {
     @GET("/shards/{shard}/players/{id}/seasons/{seasonId}")
     Call<DataHolder<PlayerSeason>> getPlayerSeason(@Path("shard") String shard, @Path("id") String playerId,
                                                            @Path("seasonId") String seasonId);
+    
+    @Headers("@: Auth")
+    @GET("/shards/{shard}/seasons/{seasonId}/gameMode/{gameMode}/players")
+    Call<DataHolder<PlayerSeason>> getSeasonPlayers(@Path("shard") String shard, @Path("gameMode") String gameMode,
+                                                           @Path("seasonId") String seasonId);
 
     @GET("/status")
     Call<DataHolder<Status>> getStatus();
