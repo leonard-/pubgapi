@@ -11,7 +11,7 @@ Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 **README.md is being updated frequently. Please let me know if there is anything else that needs to be added.**
 
-This library supports the version 12.0.0 of the PUBG Official API
+This library supports the version 14.0.0 of the PUBG Official API
 
 ## Maven Dependencies
 
@@ -40,14 +40,14 @@ You can use the pubgapi on the JCenter and the Maven Central.
 <repository>
     <id>central</id>
     <name>Central Repository</name>
-    <url>https://repo.maven.apache.org/maven2</url>	
+    <url>https://repo.maven.apache.org/maven2</url>
 </repository>
 ```
 
 ## PUBG-Java
 
 ### Configuration
-You can also provide an application.conf file as the project use **[typesafe](https://github.com/lightbend/config)** for the configuration 
+You can also provide an application.conf file as the project use **[typesafe](https://github.com/lightbend/config)** for the configuration
 
 **Make reference.conf file in src/main/resource in your project folder as shown below.**
 ```
@@ -87,7 +87,7 @@ public static final void main(String[] args) throws PubgClientException {
     MatchResponse match = pubgClient.getMatch(Platform.STEAM, "matchid");
     LOGGER.info(match.getData().getMatchAttributes().getGameMode());
 
-    // Get the telemetry for a match 
+    // Get the telemetry for a match
     // [https://documentation.pubg.com/en/telemetry.html]
     Telemetry telemetry = pubgClient.getTelemetry("Telemetry URL");
     LOGGER.info("{}", telemetry.getTelemetryEvents().size());
@@ -110,15 +110,15 @@ in your PUBG client.
 ## Promotion
 Hello.
 
-GGWP is a startup that was started to foster Korea's e-sports culture and support amateur players. 
+GGWP is a startup that was started to foster Korea's e-sports culture and support amateur players.
 
-We are currently hosting the GPL PUBG competition. The GGWP PLAY LEAGUE (GPL) is a competition for amateur players. GPL PUBG SCRIM DISCORD SERVER is also in operation. 
+We are currently hosting the GPL PUBG competition. The GGWP PLAY LEAGUE (GPL) is a competition for amateur players. GPL PUBG SCRIM DISCORD SERVER is also in operation.
 
 We want to help many players gain experience in the tournament and become professionals.  
 
-Feel free to contact us if you are interested. 
+Feel free to contact us if you are interested.
 contact@ggwp.co.kr
 
-For more information : 
+For more information :
 https://ggwp.imweb.me/
 https://discord.gg/3VaNJeX

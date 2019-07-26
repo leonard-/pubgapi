@@ -6,9 +6,6 @@ public class GameModeStats {
 
     private Integer assists;
 
-    // PC only
-    private Double bestRankPoint;
-
     private Integer boosts;
 
     @SerializedName("dBNOs")
@@ -93,14 +90,6 @@ public class GameModeStats {
 
     public void setAssists(Integer assists) {
         this.assists = assists;
-    }
-
-    public Double getBestRankPoint() {
-        return bestRankPoint;
-    }
-
-    public void setBestRankPoint(Double bestRankPoint) {
-        this.bestRankPoint = bestRankPoint;
     }
 
     public Integer getBoosts() {

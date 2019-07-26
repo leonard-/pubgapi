@@ -2,6 +2,7 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
 public class LogPlayerKill extends TelemetryEvent {
 
@@ -22,6 +23,15 @@ public class LogPlayerKill extends TelemetryEvent {
 
     @SerializedName("damageReason")
     private String damageReason;
+
+    @SerializedName("damageCauserAdditionalInfo")
+    private List<String> damageCauserAdditionalInfo;
+
+    @SerializedName("victimWeapon")
+    private String victimWeapon;
+
+    @SerializedName("victimWeaponAdditionalInfo")
+    private List<String> victimWeaponAdditionalInfo;
 
     @SerializedName("distance")
     private Float distance;
@@ -52,6 +62,30 @@ public class LogPlayerKill extends TelemetryEvent {
 
     public void setVictim(Character victim) {
         this.victim = victim;
+    }
+
+    public String getVictimWeapon() {
+        return victimWeapon;
+    }
+
+    public void setVictimWeapon(String victimWeapon) {
+        this.victimWeapon = victimWeapon;
+    }
+
+    public List<String> getDamageCauserAdditionalInfo() {
+        return damageCauserAdditionalInfo;
+    }
+
+    public void setDamageCauserAdditionalInfo(List<String> damageCauserAdditionalInfo) {
+        this.damageCauserAdditionalInfo = damageCauserAdditionalInfo;
+    }
+
+    public List<String> getVictimWeaponAdditionalInfo() {
+        return victimWeaponAdditionalInfo;
+    }
+
+    public void setVictimWeaponAdditionalInfo(List<String> victimWeaponAdditionalInfo) {
+        this.victimWeaponAdditionalInfo = victimWeaponAdditionalInfo;
     }
 
     public String getDamageTypeCategory() {

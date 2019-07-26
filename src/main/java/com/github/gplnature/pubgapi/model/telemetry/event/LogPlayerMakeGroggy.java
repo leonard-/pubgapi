@@ -2,6 +2,7 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
 // PC Only
 public class LogPlayerMakeGroggy extends TelemetryEvent {
@@ -15,11 +16,20 @@ public class LogPlayerMakeGroggy extends TelemetryEvent {
     @SerializedName("victim")
     private Character victim;
 
+    @SerializedName("victimWeapon")
+    private String victimWeapon;
+
+    @SerializedName("victimWeaponAdditionalInfo")
+    private List<String> victimWeaponAdditionalInfo;
+
     @SerializedName("damageTypeCategory")
     private String damageTypeCategory;
 
     @SerializedName("damageCauserName")
     private String damageCauserName;
+
+    @SerializedName("damageCauserAdditionalInfo")
+    private List<String> damageCauserAdditionalInfo;
 
     @SerializedName("distance")
     private Float distance;
@@ -96,5 +106,29 @@ public class LogPlayerMakeGroggy extends TelemetryEvent {
 
     public void setdBNOId(int dBNOId) {
         this.dBNOId = dBNOId;
+    }
+
+    public List<String> getDamageCauserAdditionalInfo() {
+        return damageCauserAdditionalInfo;
+    }
+
+    public void setDamageCauserAdditionalInfo(List<String> damageCauserAdditionalInfo) {
+        this.damageCauserAdditionalInfo = damageCauserAdditionalInfo;
+    }
+
+    public String getVictimWeapon() {
+        return victimWeapon;
+    }
+
+    public void setVictimWeapon(String victimWeapon) {
+        this.victimWeapon = victimWeapon;
+    }
+
+    public List<String> getVictimWeaponAdditionalInfo() {
+        return victimWeaponAdditionalInfo;
+    }
+
+    public void setVictimWeaponAdditionalInfo(List<String> victimWeaponAdditionalInfo) {
+        this.victimWeaponAdditionalInfo = victimWeaponAdditionalInfo;
     }
 }

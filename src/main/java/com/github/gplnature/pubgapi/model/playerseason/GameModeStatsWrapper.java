@@ -15,6 +15,9 @@ public class GameModeStatsWrapper {
     private GameModeStats soloFpp;
 
     private GameModeStats squad;
+    
+    // PC only
+    private Double bestRankPoint;
 
     @SerializedName("squad-fpp")
     private GameModeStats squadFpp;
@@ -28,6 +31,15 @@ public class GameModeStatsWrapper {
 
     public void setDuo(GameModeStats duo) {
         this.duo = duo;
+    }
+    
+    
+    public Double getBestRankPoint() {
+        return bestRankPoint;
+    }
+
+    public void setBestRankPoint(Double bestRankPoint) {
+        this.bestRankPoint = bestRankPoint;
     }
 
     public GameModeStats getDuoFpp() {
