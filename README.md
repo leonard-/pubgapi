@@ -10,6 +10,7 @@ Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 **The project is based on mautini's pubgjava project. I'm using it with permission from him.**
 
 **README.md is being updated frequently. Please let me know if there is anything else that needs to be added.**
+**There are some things I didn't test In the event of an error, please open an issue and let me know.**
 
 This library supports the version 15.3.0 of the PUBG Official API
 
