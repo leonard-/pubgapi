@@ -12,11 +12,35 @@ public class Vehicle {
 
     @SerializedName("healthPercent")
     private Float healthPercent;
+    @SerializedName("rotationPitch")
+    private Float rotationPitch;
 
     @SerializedName("feulPercent")
     private Float feulPercent;
+    @SerializedName("vehicleUniqueId")
+    private int vehicleUniqueId;
+    @SerializedName("isWheelsInAir")
+    private boolean isWheelsInAir;
+    @SerializedName("isInWaterVolume")
+    private boolean isInWaterVolume;
 
     public Vehicle() {
+    }
+
+    public Float getRotationPitch() {
+        return rotationPitch;
+    }
+
+    public int getVehicleUniqueId() {
+        return vehicleUniqueId;
+    }
+
+    public boolean isIsWheelsInAir() {
+        return isWheelsInAir;
+    }
+
+    public boolean isIsInWaterVolume() {
+        return isInWaterVolume;
     }
 
     public String getVehicleType() {

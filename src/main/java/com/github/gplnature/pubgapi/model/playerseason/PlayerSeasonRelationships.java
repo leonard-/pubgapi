@@ -3,7 +3,6 @@ package com.github.gplnature.pubgapi.model.playerseason;
 import com.github.gplnature.pubgapi.holders.DataHolder;
 import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.season.Season;
 import com.google.gson.annotations.SerializedName;

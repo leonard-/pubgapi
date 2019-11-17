@@ -6,6 +6,8 @@ public class LogItemPickupFromLootBox extends TelemetryEventCharacterItem {
 
     @SerializedName("ownerTeamId")
     private int ownerTeamId;
+    @SerializedName("creatorAccountId")
+    private String creatorAccountId;
 
     public LogItemPickupFromLootBox() {
         super();
@@ -13,6 +15,10 @@ public class LogItemPickupFromLootBox extends TelemetryEventCharacterItem {
 
     public int getOwnerTeamId() {
         return ownerTeamId;
+    }
+
+    public String getCreatorAccountId() {
+        return creatorAccountId;
     }
 
 }

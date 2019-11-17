@@ -2,7 +2,6 @@ package com.github.gplnature.pubgapi.util;
 
 import com.github.gplnature.pubgapi.exception.PubgClientException;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.player.PlayerRelationships;
 import java.util.List;
