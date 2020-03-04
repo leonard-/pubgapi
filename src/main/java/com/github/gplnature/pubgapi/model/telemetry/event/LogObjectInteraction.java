@@ -2,6 +2,8 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class LogObjectInteraction extends TelemetryEventCharacter{
     
     @SerializedName("objectType")
@@ -9,7 +11,7 @@ public class LogObjectInteraction extends TelemetryEventCharacter{
     @SerializedName("objectTypeStatus")
     private String objectLocationStatus;
     @SerializedName("objectTypeAdditionalInfo")
-    private String objectTypeAdditionalInfo;
+    private List<String> objectTypeAdditionalInfo;
     @SerializedName("objectTypeCount")
     private int objectTypeCount;
 
@@ -25,7 +27,7 @@ public class LogObjectInteraction extends TelemetryEventCharacter{
         return objectLocationStatus;
     }
 
-    public String getObjectTypeAdditionalInfo() {
+    public List<String> getObjectTypeAdditionalInfo() {
         return objectTypeAdditionalInfo;
     }
 

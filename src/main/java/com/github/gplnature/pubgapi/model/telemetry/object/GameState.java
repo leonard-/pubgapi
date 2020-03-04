@@ -37,6 +37,12 @@ public class GameState {
     @SerializedName("redZoneRadius")
     private Float redZoneRadius;
 
+    @SerializedName("blackZonePosition")
+    private Location blackZonePosition;
+
+    @SerializedName("blackZoneRadius")
+    private Float blackZoneRadius;
+
     public GameState() {
     }
 
@@ -126,5 +132,21 @@ public class GameState {
 
     public void setRedZoneRadius(Float redZoneRadius) {
         this.redZoneRadius = redZoneRadius;
+    }
+
+    public Location getBlackZonePosition() {
+        return blackZonePosition;
+    }
+
+    public void setBlackZonePosition(Location blackZonePosition) {
+        this.blackZonePosition = blackZonePosition;
+    }
+
+    public Float getBlackZoneRadius() {
+        return blackZoneRadius;
+    }
+
+    public void setBlackZoneRadius(Float blackZoneRadius) {
+        this.blackZoneRadius = blackZoneRadius;
     }
 }

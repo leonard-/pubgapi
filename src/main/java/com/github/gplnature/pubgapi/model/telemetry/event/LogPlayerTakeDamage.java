@@ -28,6 +28,9 @@ public class LogPlayerTakeDamage extends TelemetryEvent {
     @SerializedName("damageCauserName")
     private String damageCauserName;
 
+    @SerializedName("isThroughPenetrableWall")
+    private Boolean isThroughPenetrableWall;
+
     public LogPlayerTakeDamage() {
         super();
     }
@@ -86,5 +89,13 @@ public class LogPlayerTakeDamage extends TelemetryEvent {
 
     public void setDamageCauserName(String damageCauserName) {
         this.damageCauserName = damageCauserName;
+    }
+
+    public Boolean getThroughPenetrableWall() {
+        return isThroughPenetrableWall;
+    }
+
+    public void setThroughPenetrableWall(Boolean throughPenetrableWall) {
+        isThroughPenetrableWall = throughPenetrableWall;
     }
 }

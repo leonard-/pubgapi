@@ -2,6 +2,7 @@ package com.github.gplnature.pubgapi.model.match;
 
 import com.github.gplnature.pubgapi.model.GameMode;
 import com.github.gplnature.pubgapi.model.Map;
+import com.github.gplnature.pubgapi.model.MatchType;
 import com.github.gplnature.pubgapi.model.SeasonState;
 import java.time.ZonedDateTime;
 
@@ -10,6 +11,8 @@ public class MatchAttributes {
     private ZonedDateTime createdAt;
 
     private Integer duration;
+
+    private MatchType matchType;
 
     private GameMode gameMode;
 
@@ -42,6 +45,14 @@ public class MatchAttributes {
 
     public void setDuration(Integer duration) {
         this.duration = duration;
+    }
+
+    public MatchType getMatchType() {
+        return matchType;
+    }
+
+    public void setMatchType(MatchType matchType) {
+        this.matchType = matchType;
     }
 
     public GameMode getGameMode() {
