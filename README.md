@@ -13,7 +13,7 @@ Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 **There are some things I didn't test In the event of an error, please open an issue and let me know.**
 
-This library supports the version 15.3.0 of the PUBG Official API
+This library supports the version 17.1.0 of the PUBG Official API
 
 ## Maven Dependencies
 
@@ -105,22 +105,9 @@ getRateLimitReset()
 ```
 in your PUBG client.
 
-## Links
+### Links
 - [PUBG developer portal](https://developer.playbattlegrounds.com/)
 - [Mautini pubg java](https://github.com/mautini/pubgjava)
 
-## Promotion
-Hello.
-
-GGWP is a startup that was started to foster Korea's e-sports culture and support amateur players.
-
-We are currently hosting the GPL PUBG competition. The GGWP PLAY LEAGUE (GPL) is a competition for amateur players. GPL PUBG SCRIM DISCORD SERVER is also in operation.
-
-We want to help many players gain experience in the tournament and become professionals.  
-
-Feel free to contact us if you are interested.
-contact@ggwp.co.kr
-
-For more information :
-https://ggwp.imweb.me/
-https://discord.gg/3VaNJeX
+### Promotion
+Empty
