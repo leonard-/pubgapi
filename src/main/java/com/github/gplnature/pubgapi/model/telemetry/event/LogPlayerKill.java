@@ -1,6 +1,7 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
+import com.github.gplnature.pubgapi.model.telemetry.object.GameResult;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
@@ -35,6 +36,12 @@ public class LogPlayerKill extends TelemetryEvent {
 
     @SerializedName("distance")
     private Float distance;
+
+    @SerializedName("victimGameResult")
+    private GameResult victimGameResult;
+
+    @SerializedName("isThroughPenetrableWall")
+    private Boolean isThroughPenetrableWall;
 
     public LogPlayerKill() {
         super();
@@ -118,5 +125,21 @@ public class LogPlayerKill extends TelemetryEvent {
 
     public void setDamageReason(String damageReason) {
         this.damageReason = damageReason;
+    }
+
+    public GameResult getVictimGameResult() {
+        return victimGameResult;
+    }
+
+    public void setVictimGameResult(GameResult victimGameResult) {
+        this.victimGameResult = victimGameResult;
+    }
+
+    public Boolean getThroughPenetrableWall() {
+        return isThroughPenetrableWall;
+    }
+
+    public void setThroughPenetrableWall(Boolean throughPenetrableWall) {
+        isThroughPenetrableWall = throughPenetrableWall;
     }
 }

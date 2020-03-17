@@ -2,6 +2,8 @@ package com.github.gplnature.pubgapi.model.telemetry.object;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Character {
 
     @SerializedName("name")
@@ -21,6 +23,15 @@ public class Character {
 
     @SerializedName("accountId")
     private String accountId;
+
+    @SerializedName("isInBlueZone")
+    private Boolean isInBlueZone;
+
+    @SerializedName("isInRedZone")
+    private Boolean isInRedZone;
+
+    @SerializedName("zone")
+    private List<String> zone;
 
     public Character() {
     }
@@ -71,5 +82,29 @@ public class Character {
 
     public void setAccountId(String accountId) {
         this.accountId = accountId;
+    }
+
+    public Boolean getInBlueZone() {
+        return isInBlueZone;
+    }
+
+    public void setInBlueZone(Boolean inBlueZone) {
+        isInBlueZone = inBlueZone;
+    }
+
+    public Boolean getInRedZone() {
+        return isInRedZone;
+    }
+
+    public void setInRedZone(Boolean inRedZone) {
+        isInRedZone = inRedZone;
+    }
+
+    public List<String> getZone() {
+        return zone;
+    }
+
+    public void setZone(List<String> zone) {
+        this.zone = zone;
     }
 }

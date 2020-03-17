@@ -40,6 +40,9 @@ public class LogPlayerMakeGroggy extends TelemetryEvent {
     @SerializedName("dBNOId")
     private int dBNOId;
 
+    @SerializedName("isThroughPenetrableWall")
+    private Boolean isThroughPenetrableWall;
+
     public LogPlayerMakeGroggy() {
         super();
     }
@@ -130,5 +133,13 @@ public class LogPlayerMakeGroggy extends TelemetryEvent {
 
     public void setVictimWeaponAdditionalInfo(List<String> victimWeaponAdditionalInfo) {
         this.victimWeaponAdditionalInfo = victimWeaponAdditionalInfo;
+    }
+
+    public Boolean getThroughPenetrableWall() {
+        return isThroughPenetrableWall;
+    }
+
+    public void setThroughPenetrableWall(Boolean throughPenetrableWall) {
+        isThroughPenetrableWall = throughPenetrableWall;
     }
 }
