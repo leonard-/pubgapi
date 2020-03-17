@@ -38,7 +38,9 @@ public enum GameMode {
     @SerializedName("zombie-solo") ZOMBIE_SOLO("zombie-solo"),
     @SerializedName("zombie-solo-fpp") ZOMBIE_SOLO_FPP("zombie-solo-fpp"),
     @SerializedName("zombie-squad") ZOMBIE_SQUAD("zombie-squad"),
-    @SerializedName("zombie-squad-fpp") ZOMBIE_SQUAD_FPP("zombie-squad-fpp");
+    @SerializedName("zombie-squad-fpp") ZOMBIE_SQUAD_FPP("zombie-squad-fpp"),
+    @SerializedName("lab") LAB("lab"),
+    @SerializedName("lab-fpp") LAB_FPP("lab-fpp");
 
     private final String text;
 
