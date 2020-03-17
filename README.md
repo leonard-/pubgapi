@@ -25,7 +25,8 @@ This library supports the version 17.1.0 of the PUBG Official API
     <version>{Latest}</version>
 </dependency>
 ```
-[ ![Download](https://api.bintray.com/packages/gplnature/java-wrappers/pubgapi/images/download.svg) ](https://bintray.com/gplnature/java-wrappers/pubgapi/_latestVersion)
+[ ![JCenter](https://api.bintray.com/packages/gplnature/java-wrappers/pubgapi/images/download.svg) ](https://bintray.com/gplnature/java-wrappers/pubgapi/_latestVersion)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.gplnature/pubgapi.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.gplnature%22%20AND%20a:%22pubgapi%22)
 
 You can use the pubgapi on the JCenter and the Maven Central.
 
@@ -37,7 +38,7 @@ You can use the pubgapi on the JCenter and the Maven Central.
     <url>http://jcenter.bintray.com</url>
 </repository>
 ```
-- Central Maven
+- Maven Central 
 ```xml
 <repository>
     <id>central</id>
