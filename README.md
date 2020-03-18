@@ -27,6 +27,7 @@ This library supports the version 17.2.0 of the PUBG Official API
 ```
 
 **Maven Central is slow to update**
+
 [ ![JCenter](https://api.bintray.com/packages/gplnature/java-wrappers/pubgapi/images/download.svg) ](https://bintray.com/gplnature/java-wrappers/pubgapi/_latestVersion)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.gplnature/pubgapi.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.gplnature%22%20AND%20a:%22pubgapi%22)
 
