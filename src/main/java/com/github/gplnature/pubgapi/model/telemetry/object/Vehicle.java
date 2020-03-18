@@ -6,66 +6,71 @@ public class Vehicle {
 
     @SerializedName("vehicleType")
     private String vehicleType;
-
     @SerializedName("vehicleId")
     private String vehicleId;
-
     @SerializedName("healthPercent")
-    private Float healthPercent;
-
+    private float healthPercent;
     @SerializedName("feulPercent")
-    private Float feulPercent;
+    private float feulPercent;
+    @SerializedName("velocity")
+    private float velocity;
+    @SerializedName("altitudeAbs")
+    private float altitudeAbs;
+    @SerializedName("altitudeRel")
+    private float altitudeRel;
     @SerializedName("vehicleUniqueId")
     private int vehicleUniqueId;
     @SerializedName("isWheelsInAir")
     private boolean isWheelsInAir;
     @SerializedName("isInWaterVolume")
     private boolean isInWaterVolume;
+    @SerializedName("isEngineOn")
+    private boolean isEngineOn;
 
     public Vehicle() {
-    }
-
-    public int getVehicleUniqueId() {
-        return vehicleUniqueId;
-    }
-
-    public boolean isIsWheelsInAir() {
-        return isWheelsInAir;
-    }
-
-    public boolean isIsInWaterVolume() {
-        return isInWaterVolume;
     }
 
     public String getVehicleType() {
         return vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
     public String getVehicleId() {
         return vehicleId;
     }
 
-    public void setVehicleId(String vehicleId) {
-        this.vehicleId = vehicleId;
-    }
-
-    public Float getHealthPercent() {
+    public float getHealthPercent() {
         return healthPercent;
     }
 
-    public void setHealthPercent(Float healthPercent) {
-        this.healthPercent = healthPercent;
-    }
-
-    public Float getFeulPercent() {
+    public float getFeulPercent() {
         return feulPercent;
     }
 
-    public void setFeulPercent(Float feulPercent) {
-        this.feulPercent = feulPercent;
+    public float getVelocity() {
+        return velocity;
+    }
+
+    public float getAltitudeAbs() {
+        return altitudeAbs;
+    }
+
+    public float getAltitudeRel() {
+        return altitudeRel;
+    }
+
+    public int getVehicleUniqueId() {
+        return vehicleUniqueId;
+    }
+
+    public boolean isWheelsInAir() {
+        return isWheelsInAir;
+    }
+
+    public boolean isInWaterVolume() {
+        return isInWaterVolume;
+    }
+
+    public boolean isEngineOn() {
+        return isEngineOn;
     }
 }
