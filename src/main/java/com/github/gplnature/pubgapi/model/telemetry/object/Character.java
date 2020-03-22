@@ -40,71 +40,35 @@ public class Character {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getTeamId() {
         return teamId;
-    }
-
-    public void setTeamId(String teamId) {
-        this.teamId = teamId;
     }
 
     public Float getHealth() {
         return health;
     }
 
-    public void setHealth(Float health) {
-        this.health = health;
-    }
-
     public Location getLocation() {
         return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public Integer getRanking() {
         return ranking;
     }
 
-    public void setRanking(Integer ranking) {
-        this.ranking = ranking;
-    }
-
     public String getAccountId() {
         return accountId;
-    }
-
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
     }
 
     public Boolean getInBlueZone() {
         return isInBlueZone;
     }
 
-    public void setInBlueZone(Boolean inBlueZone) {
-        isInBlueZone = inBlueZone;
-    }
-
     public Boolean getInRedZone() {
         return isInRedZone;
     }
 
-    public void setInRedZone(Boolean inRedZone) {
-        isInRedZone = inRedZone;
-    }
-
     public List<String> getZone() {
         return zone;
-    }
-
-    public void setZone(List<String> zone) {
-        this.zone = zone;
     }
 }

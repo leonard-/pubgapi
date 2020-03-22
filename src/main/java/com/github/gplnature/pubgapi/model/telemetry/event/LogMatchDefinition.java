@@ -8,9 +8,6 @@ public class LogMatchDefinition extends TelemetryEvent {
     @SerializedName("MatchId")
     private String matchId;
 
-    @SerializedName("PingQuality")
-    private String pingQuality;
-
     @SerializedName("SeasonState")
     private SeasonState seasonState;
 
@@ -24,14 +21,6 @@ public class LogMatchDefinition extends TelemetryEvent {
 
     public void setMatchId(String matchId) {
         this.matchId = matchId;
-    }
-
-    public String getPingQuality() {
-        return pingQuality;
-    }
-
-    public void setPingQuality(String pingQuality) {
-        this.pingQuality = pingQuality;
     }
 
     public SeasonState getSeasonState() {
