@@ -13,7 +13,7 @@ Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 **There are some things I didn't test In the event of an error, please open an issue and let me know.**
 
-This library supports the version 17.2.0 of the PUBG Official API
+This library supports the version 18.1.0 of the PUBG Official API
 
 ## Maven Dependencies
 
