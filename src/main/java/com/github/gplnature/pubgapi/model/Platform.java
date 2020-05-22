@@ -7,6 +7,8 @@ public enum Platform {
     @SerializedName("psn") PSN("psn"),
     @SerializedName("kakao") KAKAO("kakao"),
     @SerializedName("xbox") XBOX("xbox"),
+    @SerializedName("sonole") CONSOLE("sonole"),
+    @SerializedName("stadia") STADIA("stadia"),
     @SerializedName("tournament") TOURNAMENT("tournament");
 
     private final String text;
