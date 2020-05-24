@@ -58,6 +58,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Create a new PUBG Client
+     *
      * @param apiKey to use
      */
     protected AbstractPubgClient(String apiKey) {
@@ -147,7 +148,7 @@ public abstract class AbstractPubgClient {
                     try {
                         Class c = Class.forName(TELEMETRY_PACKAGE_NAME + type);
                         return context.deserialize(json, c);
-                    } catch (ClassNotFoundException | ClassCastException e) {
+                    } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     }
 
