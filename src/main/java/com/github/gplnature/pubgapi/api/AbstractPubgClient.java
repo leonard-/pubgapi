@@ -18,6 +18,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZonedDateTime;
@@ -52,8 +53,15 @@ public abstract class AbstractPubgClient {
      * Create a new PUBG Client
      */
     protected AbstractPubgClient() {
-        String apiKey = ConfigFactory.load().getString("apiKey");
+        this(ConfigFactory.load().getString("apiKey"));
+    }
 
+    /**
+     * Create a new PUBG Client
+     *
+     * @param apiKey to use
+     */
+    protected AbstractPubgClient(String apiKey) {
         // Create a custom OkHttpClient to add the headers for all the requests
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(
@@ -160,6 +168,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Indicate how many requests you can perform before the api return an error
+     *
      * @return Number of available RateLimitRemaining
      */
     public int getRateLimitRemaining() {
@@ -168,6 +177,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Get the rate limit (how many requests you can perform per minute)
+     *
      * @return Total number of available rateLimit
      */
     public int getRateLimit() {
@@ -176,6 +186,7 @@ public abstract class AbstractPubgClient {
 
     /**
      * Indicate when your rate limit will be reset
+     *
      * @return Date
      */
     public Date getRateLimitReset() {

@@ -4,7 +4,7 @@ import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
 import com.google.gson.annotations.SerializedName;
 
-public class LogPlayerUseFlareGun {
+public class LogPlayerUseFlareGun extends TelemetryEventCharacter {
     @SerializedName("attackId")
     private int attackId;
     @SerializedName("fireWeaponStackCount")
