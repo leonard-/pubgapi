@@ -62,6 +62,15 @@ You can also provide an application.conf file as the project use **[typesafe](ht
     apiKey: Your Api key
 }
 ```
+
+or
+```java
+public class main {
+    public static final void main(String[] args) {
+        PubgClient pubgClient = new PubgClient("Api Key");
+    }
+}
+```
 ### Make API Key
 You can get an API key from **[PUBG Developer Site](https://developer.playbattlegrounds.com/)**
 
