@@ -11,6 +11,7 @@ import com.github.gplnature.pubgapi.model.season.Season;
 import com.github.gplnature.pubgapi.model.status.Status;
 import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
 import com.github.gplnature.pubgapi.model.tournament.Tournament;
+import com.github.gplnature.pubgapi.model.weapon.WeaponMastery;
 import retrofit2.Call;
 import retrofit2.http.*;
 
@@ -34,6 +35,10 @@ public interface PubgInterface {
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}")
     Call<DataHolder<Player>> getPlayer(@Path("shard") String shard, @Path("id") String id);
+
+    @Headers("@: Auth")
+    @GET("/shards/{shard}/players/{id}/weapon_mastery")
+    Call<WeaponMastery> getWeaponMastery(@Path("shard") String shard, @Path("id") String id);
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}/seasons/{seasonId}")

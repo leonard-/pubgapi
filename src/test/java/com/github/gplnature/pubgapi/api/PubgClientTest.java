@@ -1,8 +1,8 @@
 package com.github.gplnature.pubgapi.api;
 
 import com.github.gplnature.pubgapi.exception.PubgClientException;
+import com.github.gplnature.pubgapi.model.ExtendedPlatform;
 import com.github.gplnature.pubgapi.model.Platform;
-import com.github.gplnature.pubgapi.model.PlatformRegion;
 import com.github.gplnature.pubgapi.model.asset.Asset;
 import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
@@ -30,10 +30,10 @@ public class PubgClientTest {
             .minus(1, ChronoUnit.DAYS)
             .minus(6, ChronoUnit.HOURS);
 
-        Sample sample = client.getSamples(PlatformRegion.CONSOLE, eveningTwoDaysAgo);
+        Sample sample = client.getSamples(Platform.CONSOLE, eveningTwoDaysAgo);
 
         Match matchStub = sample.getSampleRelationships().getMatches().get(0);
-        MatchResponse matchResponse = client.getMatch(Platform.XBOX, matchStub.getId());
+        MatchResponse matchResponse = client.getMatch(ExtendedPlatform.XBOX, matchStub.getId());
         Asset assetStub = matchResponse.getData().getRelationships().getAssets().get(0);
         Asset asset = findAsset(matchResponse, assetStub);
 
