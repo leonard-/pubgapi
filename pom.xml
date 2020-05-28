@@ -6,7 +6,7 @@
     <groupId>com.github.gplnature</groupId>
     <artifactId>pubgapi</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.7</version>
+    <version>0.1.8</version>
     <name>pubgapi</name>
     <description>Java Wrapper for the PUBG API.</description>
     <url>https://github.com/GPLNature/pubgapi</url>
