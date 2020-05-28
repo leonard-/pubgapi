@@ -2,14 +2,12 @@ package com.github.gplnature.pubgapi.api;
 
 import com.github.gplnature.pubgapi.exception.PubgClientException;
 import com.github.gplnature.pubgapi.holders.DataHolder;
-import com.github.gplnature.pubgapi.model.ExtendedPlatform;
-import com.github.gplnature.pubgapi.model.GameMode;
-import com.github.gplnature.pubgapi.model.MiddlePlatform;
-import com.github.gplnature.pubgapi.model.Platform;
+import com.github.gplnature.pubgapi.model.*;
 import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.playerseason.PlayerSeason;
+import com.github.gplnature.pubgapi.model.ranked.RankedData;
 import com.github.gplnature.pubgapi.model.sample.Sample;
 import com.github.gplnature.pubgapi.model.season.Season;
 import com.github.gplnature.pubgapi.model.status.Status;
@@ -174,7 +172,7 @@ public class PubgClient extends AbstractPubgClient {
     /**
      * Get season information for a single player. This method must be used for
      * Xbox or PC seasons before 18/10/03. After this date, use
-     * {@link #getPlayerSeason(Platform, String, String)}
+     * {@link #getPlayerSeason(MiddlePlatform, String, String)}
      *
      * @param platform PlatformRegion (example: Platform.STEAM)
      * @param playerId PUBG PLAYER IDS
@@ -182,27 +180,104 @@ public class PubgClient extends AbstractPubgClient {
      * @return PlayerSeason data by playerId with seasonId
      * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
-    public PlayerSeason getPlayerSeason(Platform platform, String playerId,
+    public PlayerSeason getPlayerSeason(MiddlePlatform platform, String playerId,
                                         String seasonId) throws PubgClientException {
 
-        return RetrofitUtil.getResponse(pubgInterface.getPlayerSeason(platform.toString(), playerId, seasonId)).getData();
+        return PlayerSeason(platform.toString(), playerId, seasonId);
     }
 
     /**
      * Get season information for a single player. This method must be used for
      * Xbox or PC seasons before 18/10/03. After this date, use
-     * {@link #getPlayerSeason(Platform, String, String)}
+     * {@link #getPlayerSeason(PlatformRegion, String, String)}
      *
-     * @param platform PlatformRegion (example: Platform.STEAM)
+     * @param platform PlatformRegion (example: PlatformRegion.PC_AS)
+     * @param playerId PUBG PLAYER IDS
+     * @param seasonId SeasonID (example: Season.getId())
+     * @return PlayerSeason data by playerId with seasonId
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public PlayerSeason getPlayerSeason(PlatformRegion platform, String playerId,
+                                        String seasonId) throws PubgClientException {
+
+        return PlayerSeason(platform.toString(), playerId, seasonId);
+    }
+
+    private PlayerSeason PlayerSeason(String platform, String playerId,
+                                      String seasonId) throws PubgClientException {
+        return RetrofitUtil.getResponse(pubgInterface.getPlayerSeason(platform, playerId, seasonId)).getData();
+    }
+
+    /**
+     * Get season information for a single player. This method must be used for
+     * Xbox or PC seasons before 18/10/03. After this date, use
+     * {@link #getPlayerSeason(MiddlePlatform, String, String)}
+     *
+     * @param platform MiddlePlatform (example: MiddlePlatform.STEAM)
      * @param gameMode PUBG GAME MODE (example: GameMode.SOLO)
      * @param seasonId SeasonID (example: Season.getId())
      * @return PlayerSeason data by playerId with seasonId
      * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
-    public PlayerSeason getSeasonPlayers(Platform platform, GameMode gameMode,
+    public PlayerSeason getSeasonPlayers(MiddlePlatform platform, GameMode gameMode,
                                          String seasonId) throws PubgClientException {
 
-        return RetrofitUtil.getResponse(pubgInterface.getSeasonPlayers(platform.toString(), gameMode.toString(), seasonId)).getData();
+        return PlayersSeason(platform.toString(), gameMode.toString(), seasonId);
+    }
+
+    /**
+     * Get season information for a single player. This method must be used for
+     * Xbox or PC seasons before 18/10/03. After this date, use
+     * {@link #getPlayerSeason(PlatformRegion, String, String)}
+     *
+     * @param platform PlatformRegion (example: PlatformRegion.PC_AS)
+     * @param gameMode PUBG GAME MODE (example: GameMode.SOLO)
+     * @param seasonId SeasonID (example: Season.getId())
+     * @return PlayerSeason data by playerId with seasonId
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public PlayerSeason getSeasonPlayers(PlatformRegion platform, GameMode gameMode,
+                                         String seasonId) throws PubgClientException {
+        return PlayersSeason(platform.toString(), gameMode.toString(), seasonId);
+    }
+
+    private PlayerSeason PlayersSeason(String platform, String gameMode,
+                                      String seasonId) throws PubgClientException {
+        return RetrofitUtil.getResponse(pubgInterface.getSeasonPlayers(platform, gameMode, seasonId)).getData();
+    }
+
+    /**
+     * Get ranked information for a single player.
+     *
+     * @param platform MiddlePlatform (example: MiddlePlatform.STEAM)
+     * @param playerId PUBG PLAYER ID
+     * @param seasonId SeasonID (example: Season.getId())
+     * @return Ranked data by playerId with seasonId
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public RankedData getPlayerRanked(MiddlePlatform platform, String playerId,
+                                         String seasonId) throws PubgClientException {
+
+        return PlayerRanked(platform.toString(), playerId, seasonId);
+    }
+
+    /**
+     * Get ranked information for a single player.
+     *
+     * @param platform PlatformRegion (example: PlatformRegion.PC_AS)
+     * @param playerId PUBG PLAYER ID
+     * @param seasonId SeasonID (example: Season.getId())
+     * @return Ranked data by playerId with seasonId
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public RankedData getPlayerRanked(PlatformRegion platform, String playerId,
+                                         String seasonId) throws PubgClientException {
+        return PlayerRanked(platform.toString(), playerId, seasonId);
+    }
+
+    private RankedData PlayerRanked(String platform, String playerId,
+                                    String seasonId) throws PubgClientException {
+        return RetrofitUtil.getResponse(pubgInterface.getPlayerRanked(platform, playerId, seasonId)).getData();
     }
 
     /**
@@ -227,18 +302,30 @@ public class PubgClient extends AbstractPubgClient {
     }
 
     /**
-     * Get the leaderboard for a platform and a game mode. The leaderboard is
-     * paginated (0-9)
+     * Get the leaderboard for a platform and a game mode.
      *
      * @param platform Platform (example: Platform.STEAM)
      * @param gameMode GamMode (example: GameMode.SOLO)
-     * @param page     page
      * @return Leaderboard by gameMode with platform, page
      * @throws com.github.gplnature.pubgapi.exception.PubgClientException
      */
-    public Leaderboard getLeaderboard(MiddlePlatform platform, GameMode gameMode, int page)
+    public Leaderboard getLeaderboard(MiddlePlatform platform, GameMode gameMode)
             throws PubgClientException {
 
-        return RetrofitUtil.getResponse(pubgInterface.getLeaderboard(platform.toString(), gameMode.toString(), page)).getData();
+        return RetrofitUtil.getResponse(pubgInterface.getLeaderboard(platform.toString(), gameMode.toString())).getData();
+    }
+
+    /**
+     * Get the leaderboard for a platform and a game mode.
+     *
+     * @param platform Platform (example: PlatformRegion.PC_AS)
+     * @param gameMode GamMode (example: GameMode.SOLO)
+     * @return Leaderboard by gameMode with platform, page
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public Leaderboard getLeaderboard(PlatformRegion platform, GameMode gameMode)
+            throws PubgClientException {
+
+        return RetrofitUtil.getResponse(pubgInterface.getLeaderboard(platform.toString(), gameMode.toString())).getData();
     }
 }

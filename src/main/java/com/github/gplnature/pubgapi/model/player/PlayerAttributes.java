@@ -23,11 +23,6 @@ public class PlayerAttributes {
         return createdAt;
     }
 
-    @Deprecated
-    public void setCreatedAt(ZonedDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public String getName() {
         return name;
     }

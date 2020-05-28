@@ -6,6 +6,7 @@ import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.playerseason.PlayerSeason;
+import com.github.gplnature.pubgapi.model.ranked.RankedData;
 import com.github.gplnature.pubgapi.model.sample.Sample;
 import com.github.gplnature.pubgapi.model.season.Season;
 import com.github.gplnature.pubgapi.model.status.Status;
@@ -44,6 +45,11 @@ public interface PubgInterface {
     @GET("/shards/{shard}/players/{id}/seasons/{seasonId}")
     Call<DataHolder<PlayerSeason>> getPlayerSeason(@Path("shard") String shard, @Path("id") String playerId,
                                                            @Path("seasonId") String seasonId);
+
+    @Headers("@: Auth")
+    @GET("/shards/{shard}/players/{id}/seasons/{seasonId}/ranked")
+    Call<DataHolder<RankedData>> getPlayerRanked(@Path("shard") String shard, @Path("id") String playerId,
+                                                 @Path("seasonId") String seasonId);
     
     @Headers("@: Auth")
     @GET("/shards/{shard}/seasons/{seasonId}/gameMode/{gameMode}/players")
@@ -76,8 +82,7 @@ public interface PubgInterface {
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/leaderboards/{gameMode}")
-    Call<DataHolder<Leaderboard>> getLeaderboard(@Path("shard") String shard, @Path("gameMode") String gameMode,
-                                                         @Query("page[number]") int pageNumber);
+    Call<DataHolder<Leaderboard>> getLeaderboard(@Path("shard") String shard, @Path("gameMode") String gameMode);
 
     @GET
     Call<List<TelemetryEvent>> getTelemetry(@Url String url);

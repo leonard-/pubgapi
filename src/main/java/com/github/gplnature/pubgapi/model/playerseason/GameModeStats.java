@@ -40,7 +40,7 @@ public class GameModeStats {
 
     private Double mostSurvivalTime;
 
-    // PC only
+    @Deprecated
     private Double rankPoints;
 
     private Integer revives;

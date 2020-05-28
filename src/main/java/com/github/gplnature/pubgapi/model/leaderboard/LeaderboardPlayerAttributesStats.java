@@ -8,15 +8,35 @@ public class LeaderboardPlayerAttributesStats {
 
     private Integer games;
 
+    @Deprecated
     private Double winRatio;
+
+    private Double kda;
 
     private Integer averageDamage;
 
     private Integer kills;
 
+    @Deprecated
     private Double killDeathRatio;
 
+    private String tier;
+
+    private String subTier;
+
     public LeaderboardPlayerAttributesStats() {
+    }
+
+    public Double getKda() {
+        return kda;
+    }
+
+    public String getTier() {
+        return tier;
+    }
+
+    public String getSubTier() {
+        return subTier;
     }
 
     public Double getRankPoints() {
@@ -43,12 +63,9 @@ public class LeaderboardPlayerAttributesStats {
         this.games = games;
     }
 
+    @Deprecated
     public Double getWinRatio() {
         return winRatio;
-    }
-
-    public void setWinRatio(Double winRatio) {
-        this.winRatio = winRatio;
     }
 
     public Integer getAverageDamage() {
@@ -67,11 +84,8 @@ public class LeaderboardPlayerAttributesStats {
         this.kills = kills;
     }
 
+    @Deprecated
     public Double getKillDeathRatio() {
         return killDeathRatio;
-    }
-
-    public void setKillDeathRatio(Double killDeathRatio) {
-        this.killDeathRatio = killDeathRatio;
     }
 }
