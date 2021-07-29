@@ -9,5 +9,8 @@ public enum Map {
     @SerializedName("Baltic_Main") BALTIC_MAIN,
     @SerializedName("Range_Main") RANGE_MAIN,
     @SerializedName("DihorOtok_Main") DIHOROTOK_MAIN,
-    @SerializedName("Summerland_Main") SUMMERLAND_MAIN
+    @SerializedName("Summerland_Main") SUMMERLAND_MAIN,
+    @SerializedName("Chimera_Main") CHIMERA_MAIN,
+    @SerializedName("Heaven_Main") HEAVEN_MAIN,
+    @SerializedName("Tiger_Main") TAEGO_MAIN,
 }
