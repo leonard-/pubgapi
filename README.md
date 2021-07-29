@@ -14,7 +14,7 @@ Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 **There are some things I didn't test In the event of an error, please open an issue and let me know.**
 
-This library supports the version 20.1.0 of the PUBG Official API
+This library supports the version 21.1.0 of the PUBG Official API
 
 ## Maven Dependencies
 
@@ -27,21 +27,10 @@ This library supports the version 20.1.0 of the PUBG Official API
 </dependency>
 ```
 
-**Maven Central is slow to update**
-
-[ ![JCenter](https://api.bintray.com/packages/gplnature/java-wrappers/pubgapi/images/download.svg) ](https://bintray.com/gplnature/java-wrappers/pubgapi/_latestVersion)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.gplnature/pubgapi.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.gplnature%22%20AND%20a:%22pubgapi%22)
 
-You can use the pubgapi on the JCenter and the Maven Central.
+You can use the pubgapi on the Maven Central.
 
-- JCenter
-```xml
-<repository>
-    <id>jcenter</id>
-    <name>jcenter-bintray</name>
-    <url>http://jcenter.bintray.com</url>
-</repository>
-```
 - Maven Central 
 ```xml
 <repository>
