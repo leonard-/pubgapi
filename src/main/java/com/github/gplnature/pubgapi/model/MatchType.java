@@ -8,7 +8,9 @@ public enum MatchType {
     @SerializedName("event") EVENT("event"),
     @SerializedName("official") OFFICIAL("official"),
     @SerializedName("training") TRAINING("training"),
-    @SerializedName("competitive") COMPETITIVE("competitive");
+    @SerializedName("competitive") COMPETITIVE("competitive"),
+    @SerializedName("airoyale") AIROYALE("airoyale"),
+    @SerializedName("seasonal") SEASONAL("seasonal");
 
     private final String text;
 
