@@ -1,6 +1,5 @@
 package com.github.gplnature.pubgapi.model.ranked;
 
-import com.github.gplnature.pubgapi.model.player.PlayerAttributes;
 import com.google.gson.annotations.SerializedName;
 
 public class RankedGameModeStatsObj {
