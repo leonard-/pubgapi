@@ -13,6 +13,8 @@ public class PlayerAttributes {
 
     private String shardId;
 
+    private String banType;
+
     private String titleId;
 
     public PlayerAttributes() {
@@ -53,5 +55,13 @@ public class PlayerAttributes {
 
     public void setTitleId(String titleId) {
         this.titleId = titleId;
+    }
+
+    public String getBanType() {
+        return banType;
+    }
+
+    public void setBanType(String banType) {
+        this.banType = banType;
     }
 }
