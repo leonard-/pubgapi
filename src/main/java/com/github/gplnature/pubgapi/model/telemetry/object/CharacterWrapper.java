@@ -2,7 +2,6 @@ package com.github.gplnature.pubgapi.model.telemetry.object;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
 
 public class CharacterWrapper {
     @SerializedName("character")
