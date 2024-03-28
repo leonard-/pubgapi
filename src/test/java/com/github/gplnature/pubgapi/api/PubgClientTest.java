@@ -19,10 +19,10 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("SmokeTest")
-public class PubgClientTest {
+class PubgClientTest {
 
     @Test
-    public void testParsingTelemetryApiUsingMatchSamples() throws PubgClientException {
+    void testParsingTelemetryApiUsingMatchSamples() throws PubgClientException {
         PubgClient client = new PubgClient();
 
         // look for sample matches that where started around 6pm UTC
@@ -51,7 +51,7 @@ public class PubgClientTest {
                 .getIncluded()
                 .stream()
                 .filter(i -> i.getId().equals(assetStub.getId()) && i.getType().equals(assetStub.getType()))
-                .collect(Collectors.toList())
+                .toList()
                 .get(0);
     }
 }

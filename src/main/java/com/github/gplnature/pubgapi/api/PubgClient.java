@@ -31,7 +31,7 @@ public class PubgClient extends AbstractPubgClient {
     }
 
     /**
-     * Get the list of players matching the playerNames in the provided platform
+     * Get the list of up to 10 players matching the playerNames in the provided platform
      *
      * @param platform     Platform (example: Platform.STEAM)
      * @param playersNames PUBG PLAYER NAMES
