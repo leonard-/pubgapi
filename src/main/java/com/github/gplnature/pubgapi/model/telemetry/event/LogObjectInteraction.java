@@ -1,17 +1,17 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.ObjectAdditionalInfo;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class LogObjectInteraction extends TelemetryEventCharacter{
     
-    @SerializedName("objectType")
+    @JsonProperty("objectType")
     private String objectLocation;
-    @SerializedName("objectTypeStatus")
+    @JsonProperty("objectTypeStatus")
     private String objectLocationStatus;
-    @SerializedName("objectTypeAdditionalInfo")
+    @JsonProperty("objectTypeAdditionalInfo")
     private List<ObjectAdditionalInfo> objectTypeAdditionalInfo;
 
     public LogObjectInteraction() {

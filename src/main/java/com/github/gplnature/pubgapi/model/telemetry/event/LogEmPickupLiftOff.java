@@ -1,16 +1,16 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class LogEmPickupLiftOff extends  TelemetryEvent {
 
-    @SerializedName("instigator")
+    @JsonProperty("instigator")
     private Character instigator;
 
-    @SerializedName("riders")
+    @JsonProperty("riders")
     private List<Character> riders;
 
     public LogEmPickupLiftOff() {

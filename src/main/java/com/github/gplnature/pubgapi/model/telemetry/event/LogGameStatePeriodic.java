@@ -1,11 +1,11 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.GameState;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogGameStatePeriodic extends TelemetryEvent {
 
-    @SerializedName("gameState")
+    @JsonProperty("gameState")
     private GameState gameState;
 
     public LogGameStatePeriodic() {

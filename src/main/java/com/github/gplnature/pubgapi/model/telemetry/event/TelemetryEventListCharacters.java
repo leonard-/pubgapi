@@ -1,7 +1,8 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.gplnature.pubgapi.model.telemetry.object.CharacterWrapper;
 
 import java.util.List;
 
@@ -10,18 +11,18 @@ import java.util.List;
  */
 public abstract class TelemetryEventListCharacters extends TelemetryEvent {
 
-    @SerializedName("characters")
-    private List<Character> characters;
+    @JsonProperty("characters")
+    private List<CharacterWrapper> characters;
 
     public TelemetryEventListCharacters() {
         super();
     }
 
-    public List<Character> getCharacters() {
+    public List<CharacterWrapper> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(List<Character> characters) {
+    public void setCharacters(List<CharacterWrapper> characters) {
         this.characters = characters;
     }
 }

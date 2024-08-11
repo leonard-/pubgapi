@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model;
 
-import com.google.gson.annotations.SerializedName;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum SeasonState {
-
-    @SerializedName("closed") CLOSED,
-    @SerializedName("prepare") PREPARE,
-    @SerializedName("progress") PROGRESS,
+    @JsonProperty("closed") CLOSED,
+    @JsonProperty("prepare") PREPARE,
+    @JsonProperty("progress") PROGRESS,
 }

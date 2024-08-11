@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum AttackType {
-    @SerializedName("RedZone") RED_ZONE("RedZone"),
-    @SerializedName("Weapon") WEAPON("Weapon");
+    @JsonProperty("RedZone") RED_ZONE("RedZone"),
+    @JsonProperty("Weapon") WEAPON("Weapon");
 
     private final String text;
 

@@ -1,27 +1,28 @@
 package com.github.gplnature.pubgapi.model;
 
-import com.google.gson.annotations.SerializedName;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum PlatformRegion {
-    @SerializedName("xbox-as") XBOX_AS("xbox-as"),
-    @SerializedName("xbox-eu") XBOX_EU("xbox-eu"),
-    @SerializedName("xbox-na") XBOX_NA("xbox-na"),
-    @SerializedName("xbox-oc") XBOX_OC("xbox-oc"),
-    @SerializedName("xbox-sa") XBOX_SA("xbox_sa"),
-    @SerializedName("psn-as") PSN_AS("psn-as"),
-    @SerializedName("psn-eu") PSN_EU("psn-eu"),
-    @SerializedName("psn-na") PSN_NA("psn-na"),
-    @SerializedName("psn-oc") PSN_OC("psn-oc"),
-    @SerializedName("pc-krip") PC_KRJP("pc-krjp"),
-    @SerializedName("pc-jp") PC_JP("pc-jp"),
-    @SerializedName("pc-na") PC_NA("pc-na"),
-    @SerializedName("pc-eu") PC_EU("pc-eu"),
-    @SerializedName("pc-ru") PC_RU("pc-ru"),
-    @SerializedName("pc-oc") PC_OC("pc-oc"),
-    @SerializedName("pc-kakao") PC_KAKAO("pc-kakao"),
-    @SerializedName("pc-sea") PC_SEA("pc-sea"),
-    @SerializedName("pc-sa") PC_SA("pc-sa"),
-    @SerializedName("pc-as") PC_AS("pc-as");
+    @JsonProperty("xbox-as") XBOX_AS("xbox-as"),
+    @JsonProperty("xbox-eu") XBOX_EU("xbox-eu"),
+    @JsonProperty("xbox-na") XBOX_NA("xbox-na"),
+    @JsonProperty("xbox-oc") XBOX_OC("xbox-oc"),
+    @JsonProperty("xbox-sa") XBOX_SA("xbox_sa"),
+    @JsonProperty("psn-as") PSN_AS("psn-as"),
+    @JsonProperty("psn-eu") PSN_EU("psn-eu"),
+    @JsonProperty("psn-na") PSN_NA("psn-na"),
+    @JsonProperty("psn-oc") PSN_OC("psn-oc"),
+    @JsonProperty("pc-krip") PC_KRJP("pc-krjp"),
+    @JsonProperty("pc-jp") PC_JP("pc-jp"),
+    @JsonProperty("pc-na") PC_NA("pc-na"),
+    @JsonProperty("pc-eu") PC_EU("pc-eu"),
+    @JsonProperty("pc-ru") PC_RU("pc-ru"),
+    @JsonProperty("pc-oc") PC_OC("pc-oc"),
+    @JsonProperty("pc-kakao") PC_KAKAO("pc-kakao"),
+    @JsonProperty("pc-sea") PC_SEA("pc-sea"),
+    @JsonProperty("pc-sa") PC_SA("pc-sa"),
+    @JsonProperty("pc-as") PC_AS("pc-as");
 
     private final String text;
 

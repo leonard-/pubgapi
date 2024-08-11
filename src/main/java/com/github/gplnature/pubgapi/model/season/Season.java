@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.season;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 
 public class Season extends Entity {
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private SeasonAttributes seasonAttributes;
     private Links links;
 

@@ -1,16 +1,16 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Common;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.ZonedDateTime;
 
 public abstract class TelemetryEvent {
 
-    @SerializedName("_D")
+    @JsonProperty("_D")
     private ZonedDateTime timestamp;
 
-    @SerializedName("_T")
+    @JsonProperty("_T")
     private String type;
 
     private Common common;

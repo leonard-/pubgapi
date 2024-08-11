@@ -1,5 +1,9 @@
 package com.github.gplnature.pubgapi.api;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.gplnature.pubgapi.exception.PubgClientException;
 import com.github.gplnature.pubgapi.model.ExtendedPlatform;
 import com.github.gplnature.pubgapi.model.Platform;
@@ -8,11 +12,13 @@ import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.sample.Sample;
 import com.github.gplnature.pubgapi.model.telemetry.Telemetry;
+import com.github.gplnature.pubgapi.model.telemetry.event.LogMatchEnd;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 
 import java.time.Instant;
-
 import java.time.temporal.ChronoUnit;
 import java.util.stream.Collectors;
 
@@ -20,6 +26,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("SmokeTest")
 public class PubgClientTest {
+    private Logger log = LoggerFactory.getLogger(PubgClientTest.class);
+
 
     @Test
     public void testParsingTelemetryApiUsingMatchSamples() throws PubgClientException {
@@ -53,5 +61,26 @@ public class PubgClientTest {
                 .filter(i -> i.getId().equals(assetStub.getId()) && i.getType().equals(assetStub.getType()))
                 .collect(Collectors.toList())
                 .get(0);
+    }
+
+    @Test
+    public void testLogMatchEndTelemetry() throws PubgClientException, JsonProcessingException {
+        PubgClient client = new PubgClient();
+
+        Telemetry telemetry = client.getTelemetry("<Telemetry URL>");
+
+        // convert object to json
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule());
+        mapper.setDefaultPrettyPrinter(new DefaultPrettyPrinter());
+        log.info(() -> {
+            Object[] array = telemetry.getTelemetryEvents().stream().filter(e -> e instanceof LogMatchEnd).toArray();
+            try {
+                return mapper.writeValueAsString(array);
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
     }
 }

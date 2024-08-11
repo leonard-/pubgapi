@@ -1,14 +1,14 @@
 package com.github.gplnature.pubgapi.model.roster;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 
 public class Roster extends Entity {
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private RosterAttributes rosterAttributes;
 
-    @SerializedName("relationships")
+    @JsonProperty("relationships")
     private RosterRelationships rosterRelationships;
 
     public Roster() {

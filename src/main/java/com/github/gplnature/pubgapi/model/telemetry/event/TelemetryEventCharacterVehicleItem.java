@@ -1,11 +1,11 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public abstract class TelemetryEventCharacterVehicleItem extends TelemetryEventCharacterVehicle{
 
-    @SerializedName("item")
+    @JsonProperty("item")
     private Item item;
 
     public TelemetryEventCharacterVehicleItem() {

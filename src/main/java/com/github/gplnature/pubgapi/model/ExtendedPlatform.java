@@ -1,15 +1,15 @@
 package com.github.gplnature.pubgapi.model;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum ExtendedPlatform {
-    @SerializedName("steam") STEAM("steam"),
-    @SerializedName("kakao") KAKAO("kakao"),
-    @SerializedName("console") CONSOLE("console"),
-    @SerializedName("psn") PSN("psn"),
-    @SerializedName("xbox") XBOX("xbox"),
-    @SerializedName("stadia") STADIA("stadia"),
-    @SerializedName("tournament") TOURNAMENT("tournament");
+    @JsonProperty("steam") STEAM("steam"),
+    @JsonProperty("kakao") KAKAO("kakao"),
+    @JsonProperty("console") CONSOLE("console"),
+    @JsonProperty("psn") PSN("psn"),
+    @JsonProperty("xbox") XBOX("xbox"),
+    @JsonProperty("stadia") STADIA("stadia"),
+    @JsonProperty("tournament") TOURNAMENT("tournament");
 
     private final String text;
 

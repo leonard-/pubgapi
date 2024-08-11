@@ -5,7 +5,7 @@ import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.github.gplnature.pubgapi.model.player.Player;
 import com.github.gplnature.pubgapi.model.season.Season;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class PlayerSeasonRelationships {
@@ -14,17 +14,17 @@ public class PlayerSeasonRelationships {
 
     private DataListHolder<Entity> matchesSolo;
 
-    @SerializedName("matchesSoloFPP")
+    @JsonProperty("matchesSoloFPP")
     private DataListHolder<Entity> matchesSoloFpp;
 
     private DataListHolder<Entity> matchesDuo;
 
-    @SerializedName("matchesDuoFPP")
+    @JsonProperty("matchesDuoFPP")
     private DataListHolder<Entity> matchesDuoFpp;
 
     private DataListHolder<Entity> matchesSquad;
 
-    @SerializedName("matchesSquadFPP")
+    @JsonProperty("matchesSquadFPP")
     private DataListHolder<Entity> matchesSquadFpp;
 
     private Season season;

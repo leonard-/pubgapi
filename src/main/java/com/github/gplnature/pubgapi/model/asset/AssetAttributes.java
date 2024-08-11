@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.asset;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.ZonedDateTime;
 
 public class AssetAttributes {
 
-    @SerializedName("URL")
+    @JsonProperty("URL")
     private String url;
 
     private ZonedDateTime createdAt;

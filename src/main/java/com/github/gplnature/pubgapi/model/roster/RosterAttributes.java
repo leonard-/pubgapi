@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.roster;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RosterAttributes {
 
     private String shardId;
 
-    @SerializedName("stats")
+    @JsonProperty("stats")
     private RosterStats rosterStats;
 
     private Boolean won;

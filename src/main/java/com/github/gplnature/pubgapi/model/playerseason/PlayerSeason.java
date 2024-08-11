@@ -1,16 +1,16 @@
 package com.github.gplnature.pubgapi.model.playerseason;
 
 import com.github.gplnature.pubgapi.model.Links;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PlayerSeason {
 
     private String type;
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private PlayerSeasonAttributes playerSeasonAttributes;
 
-    @SerializedName("relationships")
+    @JsonProperty("relationships")
     private PlayerSeasonRelationships playerSeasonRelationships;
     
     private Links links;

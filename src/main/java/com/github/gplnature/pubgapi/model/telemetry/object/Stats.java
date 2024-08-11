@@ -1,25 +1,25 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Stats {
 
-    @SerializedName("killCount")
+    @JsonProperty("killCount")
     private Integer killCount;
 
-    @SerializedName("distanceOnFoot")
+    @JsonProperty("distanceOnFoot")
     private Float distanceOnFoot;
 
-    @SerializedName("distanceOnSwim")
+    @JsonProperty("distanceOnSwim")
     private Float distanceOnSwim;
 
-    @SerializedName("distanceOnVehicle")
+    @JsonProperty("distanceOnVehicle")
     private Float distanceOnVehicle;
 
-    @SerializedName("distanceOnParachute")
+    @JsonProperty("distanceOnParachute")
     private Float distanceOnParachute;
 
-    @SerializedName("distanceOnFreefall")
+    @JsonProperty("distanceOnFreefall")
     private Float distanceOnFreefall;
 
     public Integer getKillCount() {

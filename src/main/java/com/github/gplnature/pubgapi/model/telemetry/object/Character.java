@@ -1,39 +1,67 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class Character {
 
-    @SerializedName("name")
+    @JsonProperty("name")
     private String name;
 
-    @SerializedName("teamId")
+    @JsonProperty("teamId")
     private String teamId;
 
-    @SerializedName("health")
+    @JsonProperty("individualRanking")
+    private Integer individualRanking;
+
+    @JsonProperty("inSpecialZone")
+    private String inSpecialZone;
+
+    @JsonProperty("health")
     private Float health;
 
-    @SerializedName("location")
+    @JsonProperty("location")
     private Location location;
 
-    @SerializedName("ranking")
+    @JsonProperty("ranking")
     private Integer ranking;
 
-    @SerializedName("accountId")
+    @JsonProperty("accountId")
     private String accountId;
 
-    @SerializedName("isInBlueZone")
+    @JsonProperty("isInBlueZone")
     private Boolean isInBlueZone;
 
-    @SerializedName("isInRedZone")
+    @JsonProperty("isInRedZone")
     private Boolean isInRedZone;
 
-    @SerializedName("zone")
+    @JsonProperty("isInVehicle")
+    private Boolean isInVehicle;
+
+    @JsonProperty("type")
+    private String type;
+
+    @JsonProperty("zone")
     private List<String> zone;
 
     public Character() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Boolean getInVehicle() {
+        return isInVehicle;
+    }
+
+    public Integer getIndividualRanking() {
+        return individualRanking;
+    }
+
+    public String getInSpecialZone() {
+        return inSpecialZone;
     }
 
     public String getName() {

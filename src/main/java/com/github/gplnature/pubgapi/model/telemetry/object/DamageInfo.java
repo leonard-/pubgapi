@@ -1,27 +1,27 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class DamageInfo {
 
-    @SerializedName("damageReason")
+    @JsonProperty("damageReason")
     private String damageReason;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageCauserName")
+    @JsonProperty("damageCauserName")
     private String damageCauserName;
 
-    @SerializedName("additionalInfo")
+    @JsonProperty("additionalInfo")
     private List<String> additionalInfo;
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
-    @SerializedName("isThroughPenetrableWall")
+    @JsonProperty("isThroughPenetrableWall")
     private boolean isThroughPenetrableWall;
 
     public DamageInfo() {

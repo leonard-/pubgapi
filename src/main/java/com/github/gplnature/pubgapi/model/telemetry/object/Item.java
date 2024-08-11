@@ -1,24 +1,24 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class Item {
 
-    @SerializedName("itemId")
+    @JsonProperty("itemId")
     private String itemId;
 
-    @SerializedName("stackCount")
+    @JsonProperty("stackCount")
     private Integer stackCount;
 
-    @SerializedName("category")
+    @JsonProperty("category")
     private String category;
 
-    @SerializedName("subCategory")
+    @JsonProperty("subCategory")
     private String subCategory;
 
-    @SerializedName("attachedItems")
+    @JsonProperty("attachedItems")
     private List<String> attachedItems;
 
     public Item() {

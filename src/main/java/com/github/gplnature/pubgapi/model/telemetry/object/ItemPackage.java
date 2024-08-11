@@ -1,18 +1,18 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class ItemPackage {
 
-    @SerializedName("itemPackageId")
+    @JsonProperty("itemPackageId")
     private String itemPackageId;
 
-    @SerializedName("location")
+    @JsonProperty("location")
     private Location location;
 
-    @SerializedName("items")
+    @JsonProperty("items")
     private List<Item> items;
 
     public ItemPackage() {

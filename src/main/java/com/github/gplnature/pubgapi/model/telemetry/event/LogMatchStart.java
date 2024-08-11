@@ -1,5 +1,7 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class LogMatchStart extends TelemetryEventListCharacters {
 
     private String mapName;
@@ -50,16 +52,16 @@ public class LogMatchStart extends TelemetryEventListCharacters {
         return teamSize;
     }
 
-    public void setTeamSize(Integer teamSize) {
-        this.teamSize = teamSize;
+    public void setCustomGame(Boolean customGame) {
+        isCustomGame = customGame;
     }
 
     public Boolean getCustomGame() {
         return isCustomGame;
     }
 
-    public void setCustomGame(Boolean customGame) {
-        isCustomGame = customGame;
+    public void setTeamSize(Integer teamSize) {
+        this.teamSize = teamSize;
     }
 
     public Boolean getEventMode() {

@@ -1,11 +1,11 @@
 package com.github.gplnature.pubgapi.model.participant;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 
 public class Participant extends Entity {
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private ParticipantAttributes participantAttributes;
 
     public Participant() {

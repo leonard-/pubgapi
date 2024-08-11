@@ -5,11 +5,11 @@
  */
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogParachuteLanding extends TelemetryEventCharacter {
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
     public LogParachuteLanding() {

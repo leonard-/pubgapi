@@ -1,46 +1,46 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 // PC Only
 public class LogPlayerMakeGroggy extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
-    @SerializedName("victimWeapon")
+    @JsonProperty("victimWeapon")
     private String victimWeapon;
 
-    @SerializedName("victimWeaponAdditionalInfo")
+    @JsonProperty("victimWeaponAdditionalInfo")
     private List<String> victimWeaponAdditionalInfo;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageCauserName")
+    @JsonProperty("damageCauserName")
     private String damageCauserName;
 
-    @SerializedName("damageCauserAdditionalInfo")
+    @JsonProperty("damageCauserAdditionalInfo")
     private List<String> damageCauserAdditionalInfo;
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
-    @SerializedName("isAttackerInVehicle")
+    @JsonProperty("isAttackerInVehicle")
     private Boolean isAttackerInVehicle;
 
-    @SerializedName("dBNOId")
+    @JsonProperty("dBNOId")
     private int dBNOId;
 
-    @SerializedName("isThroughPenetrableWall")
+    @JsonProperty("isThroughPenetrableWall")
     private Boolean isThroughPenetrableWall;
 
     public LogPlayerMakeGroggy() {

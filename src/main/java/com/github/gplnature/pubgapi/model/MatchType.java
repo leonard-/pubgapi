@@ -1,16 +1,16 @@
 package com.github.gplnature.pubgapi.model;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum MatchType {
-    @SerializedName("arcade") ARCADE("arcade"),
-    @SerializedName("custom") CUSTOM("custom"),
-    @SerializedName("event") EVENT("event"),
-    @SerializedName("official") OFFICIAL("official"),
-    @SerializedName("training") TRAINING("training"),
-    @SerializedName("competitive") COMPETITIVE("competitive"),
-    @SerializedName("airoyale") AIROYALE("airoyale"),
-    @SerializedName("seasonal") SEASONAL("seasonal");
+    @JsonProperty("arcade") ARCADE("arcade"),
+    @JsonProperty("custom") CUSTOM("custom"),
+    @JsonProperty("event") EVENT("event"),
+    @JsonProperty("official") OFFICIAL("official"),
+    @JsonProperty("training") TRAINING("training"),
+    @JsonProperty("competitive") COMPETITIVE("competitive"),
+    @JsonProperty("airoyale") AIROYALE("airoyale"),
+    @JsonProperty("seasonal") SEASONAL("seasonal");
 
     private final String text;
 

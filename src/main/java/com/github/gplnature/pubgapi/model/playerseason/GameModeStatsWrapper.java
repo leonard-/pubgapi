@@ -1,17 +1,17 @@
 package com.github.gplnature.pubgapi.model.playerseason;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GameModeStatsWrapper {
 
     private GameModeStats duo;
 
-    @SerializedName("duo-fpp")
+    @JsonProperty("duo-fpp")
     private GameModeStats duoFpp;
 
     private GameModeStats solo;
 
-    @SerializedName("solo-fpp")
+    @JsonProperty("solo-fpp")
     private GameModeStats soloFpp;
 
     private GameModeStats squad;
@@ -19,7 +19,7 @@ public class GameModeStatsWrapper {
     // PC only
     private Double bestRankPoint;
 
-    @SerializedName("squad-fpp")
+    @JsonProperty("squad-fpp")
     private GameModeStats squadFpp;
 
     public GameModeStatsWrapper() {

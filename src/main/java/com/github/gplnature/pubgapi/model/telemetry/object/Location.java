@@ -1,16 +1,16 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Location {
 
-    @SerializedName("x")
+    @JsonProperty("x")
     private Float x;
 
-    @SerializedName("y")
+    @JsonProperty("y")
     private Float y;
 
-    @SerializedName("z")
+    @JsonProperty("z")
     private Float z;
 
     public Location() {

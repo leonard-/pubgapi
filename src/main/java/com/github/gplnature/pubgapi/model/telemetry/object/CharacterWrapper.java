@@ -1,18 +1,18 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class CharacterWrapper {
-    @SerializedName("character")
+    @JsonProperty("character")
     private Character character;
-    @SerializedName("primaryWeaponFirst")
+    @JsonProperty("primaryWeaponFirst")
     private String primaryWeaponFirst;
-    @SerializedName("primaryWeaponSecond")
+    @JsonProperty("primaryWeaponSecond")
     private String primaryWeaponSecond;
-    @SerializedName("secondaryWeapon")
+    @JsonProperty("secondaryWeapon")
     private String secondaryWeapon;
-    @SerializedName("spawnKitIndex")
+    @JsonProperty("spawnKitIndex")
     private int isInRedZone;
 
     public CharacterWrapper() {

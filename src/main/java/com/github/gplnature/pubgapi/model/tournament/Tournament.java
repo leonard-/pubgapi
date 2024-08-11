@@ -1,14 +1,14 @@
 package com.github.gplnature.pubgapi.model.tournament;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.holders.DataListHolder;
 import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Tournament extends Entity {
 
-    @SerializedName("relationships")
+    @JsonProperty("relationships")
     private TournamentRelationships tournamentRelationships;
 
     private DataListHolder<TournamentIncluded> included;

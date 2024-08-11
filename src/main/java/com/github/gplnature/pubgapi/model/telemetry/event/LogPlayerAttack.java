@@ -3,25 +3,25 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
 import com.github.gplnature.pubgapi.model.telemetry.object.Vehicle;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPlayerAttack extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
     private Integer fireWeaponStackCount;
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("attackType")
+    @JsonProperty("attackType")
     private AttackType attackType;
 
-    @SerializedName("weapon")
+    @JsonProperty("weapon")
     private Item weapon;
 
-    @SerializedName("vehicle")
+    @JsonProperty("vehicle")
     private Vehicle vehicle;
 
     public LogPlayerAttack() {

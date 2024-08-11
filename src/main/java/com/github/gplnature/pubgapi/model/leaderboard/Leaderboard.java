@@ -1,19 +1,19 @@
 package com.github.gplnature.pubgapi.model.leaderboard;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Leaderboard extends Entity {
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private LeaderboardAttributes leaderboardAttributes;
 
-    @SerializedName("relationships")
+    @JsonProperty("relationships")
     private LeaderboardRelationships leaderboardRelationships;
 
-    @SerializedName("included")
+    @JsonProperty("included")
     private List<LeaderboardPlayer> leaderboardPlayers;
 
     private Links links;

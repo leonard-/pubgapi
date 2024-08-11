@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model.participant;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ParticipantStats {
 
-    @SerializedName("DBNOs")
+    @JsonProperty("DBNOs")
     private Integer dbnos;
 
     private Integer assists;

@@ -1,16 +1,17 @@
 package com.github.gplnature.pubgapi.model;
 
-import com.google.gson.annotations.SerializedName;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum Map {
-    @SerializedName("Desert_Main") DESERT_MAIN,
-    @SerializedName("Erangel_Main") ERANGEL_MAIN,
-    @SerializedName("Savage_Main") SAVAGE_MAIN,
-    @SerializedName("Baltic_Main") BALTIC_MAIN,
-    @SerializedName("Range_Main") RANGE_MAIN,
-    @SerializedName("DihorOtok_Main") DIHOROTOK_MAIN,
-    @SerializedName("Summerland_Main") SUMMERLAND_MAIN,
-    @SerializedName("Chimera_Main") CHIMERA_MAIN,
-    @SerializedName("Heaven_Main") HEAVEN_MAIN,
-    @SerializedName("Tiger_Main") TAEGO_MAIN,
+    @JsonProperty("Desert_Main") DESERT_MAIN,
+    @JsonProperty("Erangel_Main") ERANGEL_MAIN,
+    @JsonProperty("Savage_Main") SAVAGE_MAIN,
+    @JsonProperty("Baltic_Main") BALTIC_MAIN,
+    @JsonProperty("Range_Main") RANGE_MAIN,
+    @JsonProperty("DihorOtok_Main") DIHOROTOK_MAIN,
+    @JsonProperty("Summerland_Main") SUMMERLAND_MAIN,
+    @JsonProperty("Chimera_Main") CHIMERA_MAIN,
+    @JsonProperty("Heaven_Main") HEAVEN_MAIN,
+    @JsonProperty("Tiger_Main") TAEGO_MAIN,
 }

@@ -2,17 +2,17 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Location;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPlayerDestroyProp extends TelemetryEvent {
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("objectType")
+    @JsonProperty("objectType")
     private String objectType;
 
-    @SerializedName("objectLocation")
+    @JsonProperty("objectLocation")
     private Location objectLocation;
 
     public LogPlayerDestroyProp() {
