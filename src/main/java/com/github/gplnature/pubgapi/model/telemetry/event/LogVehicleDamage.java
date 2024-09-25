@@ -2,29 +2,29 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Vehicle;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogVehicleDamage extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("vehicle")
+    @JsonProperty("vehicle")
     private Vehicle vehicle;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageCauseName")
+    @JsonProperty("damageCauseName")
     private String damageCauseName;
 
-    @SerializedName("damage")
+    @JsonProperty("damage")
     private Float damage;
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
     public LogVehicleDamage() {

@@ -1,17 +1,17 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 
 public class LogVehicleLeave extends TelemetryEventCharacterVehicle {
 
     // PC Only
-    @SerializedName("rideDistance")
+    @JsonProperty("rideDistance")
     private Float rideDistance;
-    @SerializedName("maxSpeed")
+    @JsonProperty("maxSpeed")
     private Float maxSpeed;
-    @SerializedName("fellowPassengers")
+    @JsonProperty("fellowPassengers")
     private List<Character> fellowPassengers;
 
     public LogVehicleLeave() {

@@ -2,33 +2,33 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 // PC only
 public class LogArmorDestroy extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageReason")
+    @JsonProperty("damageReason")
     private DamageReason damageReason;
 
-    @SerializedName("damageCauserName")
+    @JsonProperty("damageCauserName")
     private String damageCauserName;
 
-    @SerializedName("item")
+    @JsonProperty("item")
     private Item item;
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
     public LogArmorDestroy() {

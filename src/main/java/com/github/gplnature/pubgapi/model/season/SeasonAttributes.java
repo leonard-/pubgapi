@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.season;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SeasonAttributes {
 
     private Boolean isCurrentSeason;
 
-    @SerializedName("isOffseason")
+    @JsonProperty("isOffseason")
     private Boolean isOffSeason;
 
     public SeasonAttributes() {

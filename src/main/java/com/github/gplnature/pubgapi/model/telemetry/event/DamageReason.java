@@ -1,15 +1,15 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum DamageReason {
-    @SerializedName("ArmShot") ARM_SHOT("ArmShot"),
-    @SerializedName("HeadShot") HEAD_SHOT("HeadShot"),
-    @SerializedName("LegShot") LEG_SHOT("LegShot"),
-    @SerializedName("None") NONE("None"),
-    @SerializedName("NonSpecific") NON_SPECIFIC("NonSpecific"),
-    @SerializedName("PelvisShot") PELVIS_SHOT("PelvisShot"),
-    @SerializedName("TorsoShot") TORSO_SHOT("TorsoShot");
+    @JsonProperty("ArmShot") ARM_SHOT("ArmShot"),
+    @JsonProperty("HeadShot") HEAD_SHOT("HeadShot"),
+    @JsonProperty("LegShot") LEG_SHOT("LegShot"),
+    @JsonProperty("None") NONE("None"),
+    @JsonProperty("NonSpecific") NON_SPECIFIC("NonSpecific"),
+    @JsonProperty("PelvisShot") PELVIS_SHOT("PelvisShot"),
+    @JsonProperty("TorsoShot") TORSO_SHOT("TorsoShot");
 
     private final String text;
 

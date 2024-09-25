@@ -1,34 +1,34 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPlayerTakeDamage extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageReason")
+    @JsonProperty("damageReason")
     private DamageReason damageReason;
 
     // 1.0 damage = 1.0 health
     // Net damage after armor; damage to health
-    @SerializedName("damage")
+    @JsonProperty("damage")
     private Float damage;
 
-    @SerializedName("damageCauserName")
+    @JsonProperty("damageCauserName")
     private String damageCauserName;
 
-    @SerializedName("isThroughPenetrableWall")
+    @JsonProperty("isThroughPenetrableWall")
     private Boolean isThroughPenetrableWall;
 
     public LogPlayerTakeDamage() {

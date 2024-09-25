@@ -5,10 +5,18 @@
  */
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class LogVaultStart extends TelemetryEventCharacter {
+
+    @JsonProperty("isLedgeGrab")
+    private Boolean isLedgeGrab;
 
     public LogVaultStart() {
         super();
     }
 
+    public Boolean getLedgeGrab() {
+        return isLedgeGrab;
+    }
 }

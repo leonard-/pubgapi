@@ -5,11 +5,11 @@
  */
 package com.github.gplnature.pubgapi.model.tournament;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 
 public class TournamentIncluded extends Entity{
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private TournamentAttributes tournamentAttributes;
 
     public TournamentAttributes getTournamentAttributes() {

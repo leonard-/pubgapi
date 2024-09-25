@@ -1,6 +1,6 @@
 package com.github.gplnature.pubgapi.model.leaderboard;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LeaderboardPlayerAttributes {
 
@@ -8,7 +8,7 @@ public class LeaderboardPlayerAttributes {
 
     private Integer rank;
 
-    @SerializedName("stats")
+    @JsonProperty("stats")
     private LeaderboardPlayerAttributesStats leaderboardPlayerAttributesStats;
 
     public LeaderboardPlayerAttributes() {

@@ -1,6 +1,7 @@
 package com.github.gplnature.pubgapi.model.participant;
 
-import com.google.gson.annotations.SerializedName;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ParticipantAttributes {
 
@@ -11,7 +12,7 @@ public class ParticipantAttributes {
 
     private String shardId;
 
-    @SerializedName("stats")
+    @JsonProperty("stats")
     private ParticipantStats participantStats;
 
     public String getActor() {

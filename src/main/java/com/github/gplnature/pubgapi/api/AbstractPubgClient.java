@@ -1,5 +1,11 @@
 package com.github.gplnature.pubgapi.api;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.gplnature.pubgapi.model.asset.Asset;
 import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.github.gplnature.pubgapi.model.match.Match;
@@ -9,15 +15,12 @@ import com.github.gplnature.pubgapi.model.roster.Roster;
 import com.github.gplnature.pubgapi.model.status.Status;
 import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
 import com.github.gplnature.pubgapi.model.tournament.Tournament;
-import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import com.typesafe.config.ConfigFactory;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
 import java.time.Instant;
@@ -100,66 +103,91 @@ public abstract class AbstractPubgClient {
                             return response;
                         }).build();
 
+        ObjectMapper mapper = new ObjectMapper()
+                .registerModule(new JavaTimeModule())
+                .setDefaultPrettyPrinter(new DefaultPrettyPrinter());
 
-        // Create a new Gson object and register an adapter for the ZonedDateTime type
-        Gson gson = new GsonBuilder()
-                .registerTypeAdapter(ZonedDateTime.class, new TypeAdapter<ZonedDateTime>() {
-                    @Override
-                    public void write(JsonWriter out, ZonedDateTime value) throws IOException {
-                        out.value(value.toString());
-                    }
+        // Create and register custom serializers and deserializers
+        SimpleModule module = new SimpleModule();
 
-                    @Override
-                    public ZonedDateTime read(JsonReader in) throws IOException {
-                        return ZonedDateTime.parse(in.nextString());
-                    }
-                })
-                .registerTypeAdapter(Instant.class, (JsonSerializer<Instant>) (src, typeOfSrc, context) ->
-                        new JsonPrimitive(DateTimeFormatter.ISO_INSTANT.format(src)))
-                .registerTypeAdapter(Entity.class, (JsonDeserializer<Entity>) (json, typeOfT, context) -> {
-                    JsonObject jsonObject = json.getAsJsonObject();
+        // Custom serializer for ZonedDateTime
+        module.addSerializer(ZonedDateTime.class, new JsonSerializer<ZonedDateTime>() {
+            @Override
+            public void serialize(ZonedDateTime value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
+                gen.writeString(value.toString());
+            }
+        });
 
-                    JsonElement jsonType = jsonObject.get("type");
-                    String type = jsonType.getAsString();
+        // Custom deserializer for ZonedDateTime
+        module.addDeserializer(ZonedDateTime.class, new JsonDeserializer<ZonedDateTime>() {
+            @Override
+            public ZonedDateTime deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+                return ZonedDateTime.parse(p.getValueAsString());
+            }
+        });
 
-                    switch (type) {
-                        case "player":
-                            return context.deserialize(json, Player.class);
-                        case "match":
-                            return context.deserialize(json, Match.class);
-                        case "status":
-                            return context.deserialize(json, Status.class);
-                        case "roster":
-                            return context.deserialize(json, Roster.class);
-                        case "participant":
-                            return context.deserialize(json, Participant.class);
-                        case "asset":
-                            return context.deserialize(json, Asset.class);
-                        case "tournament":
-                            return context.deserialize(json, Tournament.class);
-                        default:
-                            return null;
-                    }
-                })
-                .registerTypeAdapter(TelemetryEvent.class, (JsonDeserializer<TelemetryEvent>) (json, typeOfT, context) -> {
-                    JsonObject jsonObject = json.getAsJsonObject();
-                    JsonElement jsonType = jsonObject.get("_T");
-                    String type = jsonType.getAsString();
-                    try {
-                        Class c = Class.forName(TELEMETRY_PACKAGE_NAME + type);
-                        return context.deserialize(json, c);
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    }
+        // Custom serializer for Instant
+        module.addSerializer(Instant.class, new JsonSerializer<Instant>() {
+            @Override
+            public void serialize(Instant value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
+                gen.writeString(DateTimeFormatter.ISO_INSTANT.format(value));
+            }
+        });
 
-                    return null;
-                })
-                .create();
+        // Custom deserializer for Entity
+        module.addDeserializer(Entity.class, new JsonDeserializer<Entity>() {
+            @Override
+            public Entity deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+                JsonNode node = p.getCodec().readTree(p);
+                String type = node.get("type").asText();
+
+                switch (type) {
+                    case "player":
+                        return p.getCodec().treeToValue(node, Player.class);
+                    case "match":
+                        return p.getCodec().treeToValue(node, Match.class);
+                    case "status":
+                        return p.getCodec().treeToValue(node, Status.class);
+                    case "roster":
+                        return p.getCodec().treeToValue(node, Roster.class);
+                    case "participant":
+                        return p.getCodec().treeToValue(node, Participant.class);
+                    case "asset":
+                        return p.getCodec().treeToValue(node, Asset.class);
+                    case "tournament":
+                        return p.getCodec().treeToValue(node, Tournament.class);
+                    default:
+                        return null;
+                }
+            }
+        });
+
+        // Custom deserializer for TelemetryEvent
+        module.addDeserializer(TelemetryEvent.class, new JsonDeserializer<TelemetryEvent>() {
+            @Override
+            public TelemetryEvent deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+                JsonNode node = p.getCodec().readTree(p);
+                String type = node.get("_T").asText();
+
+                try {
+                    Class<?> clazz = Class.forName(TELEMETRY_PACKAGE_NAME + type);
+                    return (TelemetryEvent) p.getCodec().treeToValue(node, clazz);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                return null;
+            }
+        });
+
+        mapper.registerModule(module);
+
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         // Build the interface to the API
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(PubgInterface.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(JacksonConverterFactory.create(mapper))
                 .client(okHttpClient)
                 .build();
 

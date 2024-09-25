@@ -2,45 +2,45 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.GameResult;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class LogPlayerKill extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("killer")
+    @JsonProperty("killer")
     private Character killer;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
-    @SerializedName("damageTypeCategory")
+    @JsonProperty("damageTypeCategory")
     private String damageTypeCategory;
 
-    @SerializedName("damageCauserName")
+    @JsonProperty("damageCauserName")
     private String damageCauserName;
 
-    @SerializedName("damageReason")
+    @JsonProperty("damageReason")
     private String damageReason;
 
-    @SerializedName("damageCauserAdditionalInfo")
+    @JsonProperty("damageCauserAdditionalInfo")
     private List<String> damageCauserAdditionalInfo;
 
-    @SerializedName("victimWeapon")
+    @JsonProperty("victimWeapon")
     private String victimWeapon;
 
-    @SerializedName("victimWeaponAdditionalInfo")
+    @JsonProperty("victimWeaponAdditionalInfo")
     private List<String> victimWeaponAdditionalInfo;
 
-    @SerializedName("distance")
+    @JsonProperty("distance")
     private Float distance;
 
-    @SerializedName("victimGameResult")
+    @JsonProperty("victimGameResult")
     private GameResult victimGameResult;
 
-    @SerializedName("isThroughPenetrableWall")
+    @JsonProperty("isThroughPenetrableWall")
     private Boolean isThroughPenetrableWall;
 
     public LogPlayerKill() {

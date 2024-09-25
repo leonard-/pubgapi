@@ -1,13 +1,13 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class LogRedZoneEnded extends TelemetryEvent {
 
-    @SerializedName("drivers")
+    @JsonProperty("drivers")
     private List<Character> drivers;
 
     public List<Character> getDrivers() {

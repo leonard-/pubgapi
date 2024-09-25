@@ -6,14 +6,14 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Location;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogObjectDestroy extends TelemetryEventCharacter {
 
-    @SerializedName("objectType")
+    @JsonProperty("objectType")
     private String objectType;
 
-    @SerializedName("objectLocation")
+    @JsonProperty("objectLocation")
     private Location objectLocation;
 
     public LogObjectDestroy() {

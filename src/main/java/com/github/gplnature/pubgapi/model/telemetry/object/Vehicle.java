@@ -1,30 +1,30 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Vehicle {
 
-    @SerializedName("vehicleType")
+    @JsonProperty("vehicleType")
     private String vehicleType;
-    @SerializedName("vehicleId")
+    @JsonProperty("vehicleId")
     private String vehicleId;
-    @SerializedName("healthPercent")
+    @JsonProperty("healthPercent")
     private float healthPercent;
-    @SerializedName("feulPercent")
+    @JsonProperty("feulPercent")
     private float feulPercent;
-    @SerializedName("velocity")
+    @JsonProperty("velocity")
     private float velocity;
-    @SerializedName("altitudeAbs")
+    @JsonProperty("altitudeAbs")
     private float altitudeAbs;
-    @SerializedName("altitudeRel")
+    @JsonProperty("altitudeRel")
     private float altitudeRel;
-    @SerializedName("vehicleUniqueId")
+    @JsonProperty("vehicleUniqueId")
     private int vehicleUniqueId;
-    @SerializedName("isWheelsInAir")
+    @JsonProperty("isWheelsInAir")
     private boolean isWheelsInAir;
-    @SerializedName("isInWaterVolume")
+    @JsonProperty("isInWaterVolume")
     private boolean isInWaterVolume;
-    @SerializedName("isEngineOn")
+    @JsonProperty("isEngineOn")
     private boolean isEngineOn;
 
     public Vehicle() {

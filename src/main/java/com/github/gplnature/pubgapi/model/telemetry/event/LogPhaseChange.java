@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPhaseChange extends TelemetryEvent{
     
-    @SerializedName("phase")
+    @JsonProperty("phase")
     private String phase;
-    @SerializedName("elapsedTime")
+    @JsonProperty("elapsedTime")
     private Float elapsedTime;
 
     public LogPhaseChange() {

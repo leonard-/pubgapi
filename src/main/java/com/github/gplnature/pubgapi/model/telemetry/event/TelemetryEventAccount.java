@@ -1,13 +1,13 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TelemetryEvent related to an account
  */
 public abstract class TelemetryEventAccount extends TelemetryEvent {
 
-    @SerializedName("accountId")
+    @JsonProperty("accountId")
     private String accountId;
 
     public TelemetryEventAccount() {

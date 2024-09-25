@@ -3,55 +3,55 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.DamageInfo;
 import com.github.gplnature.pubgapi.model.telemetry.object.GameResult;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class LogPlayerKillV2 extends TelemetryEvent {
 
-    @SerializedName("attackId")
+    @JsonProperty("attackId")
     private Integer attackId;
 
-    @SerializedName("dBNOId")
+    @JsonProperty("dBNOId")
     private Integer dBNOId;
 
-    @SerializedName("victimGameResult")
+    @JsonProperty("victimGameResult")
     private GameResult victimGameResult;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
-    @SerializedName("victimWeapon")
+    @JsonProperty("victimWeapon")
     private String victimWeapon;
 
-    @SerializedName("victimWeaponAdditionalInfo")
+    @JsonProperty("victimWeaponAdditionalInfo")
     private List<String> victimWeaponAdditionalInfo;
 
-    @SerializedName("dBNOMaker")
+    @JsonProperty("dBNOMaker")
     private Character dBNOMaker;
 
-    @SerializedName("dBNODamageInfo")
+    @JsonProperty("dBNODamageInfo")
     private DamageInfo dBNODamageInfo;
 
-    @SerializedName("finisher")
+    @JsonProperty("finisher")
     private Character finisher;
 
-    @SerializedName("finishDamageInfo")
+    @JsonProperty("finishDamageInfo")
     private DamageInfo finishDamageInfo;
 
-    @SerializedName("killer")
+    @JsonProperty("killer")
     private Character killer;
 
-    @SerializedName("killerDamageInfo")
+    @JsonProperty("killerDamageInfo")
     private DamageInfo killerDamageInfo;
 
-    @SerializedName("assists_AccountId")
+    @JsonProperty("assists_AccountId")
     private List<String> assistsAccountId;
 
-    @SerializedName("teamKillers_AccountId")
+    @JsonProperty("teamKillers_AccountId")
     private List<String> teamKillersAccountId;
 
-    @SerializedName("isSuicide")
+    @JsonProperty("isSuicide")
     private boolean isSuicide;
 
     public LogPlayerKillV2() {

@@ -1,14 +1,14 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogItemAttach extends TelemetryEventCharacter {
 
-    @SerializedName("parentItem")
+    @JsonProperty("parentItem")
     private Item parentItem;
 
-    @SerializedName("childItem")
+    @JsonProperty("childItem")
     private Item childItem;
 
     public LogItemAttach() {

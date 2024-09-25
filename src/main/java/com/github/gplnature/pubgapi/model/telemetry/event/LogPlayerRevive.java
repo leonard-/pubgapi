@@ -1,14 +1,14 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPlayerRevive extends TelemetryEvent {
 
-    @SerializedName("reviver")
+    @JsonProperty("reviver")
     private Character Character;
 
-    @SerializedName("victim")
+    @JsonProperty("victim")
     private Character victim;
 
     public LogPlayerRevive() {

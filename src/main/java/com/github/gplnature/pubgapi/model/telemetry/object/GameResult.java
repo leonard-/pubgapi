@@ -1,22 +1,22 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GameResult {
 
-    @SerializedName("rank")
+    @JsonProperty("rank")
     private Integer rank;
 
-    @SerializedName("gameResult")
+    @JsonProperty("gameResult")
     private String gameResult;
 
-    @SerializedName("teamId")
+    @JsonProperty("teamId")
     private Integer teamId;
 
-    @SerializedName("stats")
+    @JsonProperty("stats")
     private Stats stats;
 
-    @SerializedName("accountId")
+    @JsonProperty("accountId")
     private String accountId;
 
     public Integer getRank() {

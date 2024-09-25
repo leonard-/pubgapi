@@ -1,6 +1,6 @@
 package com.github.gplnature.pubgapi.model.ranked;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RankedGameModeStatsObj {
     private int currentRankPoint;
@@ -9,7 +9,7 @@ public class RankedGameModeStatsObj {
     private RankedTier bestTier;
     private int roundsPlayed;
     private double avgRank;
-    @SerializedName("top10Ratio")
+    @JsonProperty("top10Ratio")
     private double topTenRatio;
     private double winRatio;
     private int assists;

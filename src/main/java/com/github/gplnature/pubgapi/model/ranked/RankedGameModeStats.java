@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model.ranked;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RankedGameModeStats {
     private RankedGameModeStatsObj squad;
-    @SerializedName("squad-fpp")
+    @JsonProperty("squad-fpp")
     private RankedGameModeStatsObj squadfpp;
 
     public RankedGameModeStatsObj getSquad() {

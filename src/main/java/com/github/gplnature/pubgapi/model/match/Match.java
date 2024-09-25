@@ -1,15 +1,15 @@
 package com.github.gplnature.pubgapi.model.match;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.gplnature.pubgapi.model.Links;
 import com.github.gplnature.pubgapi.model.generic.Entity;
-import com.google.gson.annotations.SerializedName;
 
 public class Match extends Entity {
 
-    @SerializedName("attributes")
+    @JsonProperty("attributes")
     private MatchAttributes matchAttributes;
 
-    @SerializedName("relationships")
+    @JsonProperty("relationships")
     private MatchRelationships matchRelationships;
 
     private Links links;

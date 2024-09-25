@@ -1,12 +1,12 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogItemPickupFromLootBox extends TelemetryEventCharacterItem {
 
-    @SerializedName("ownerTeamId")
+    @JsonProperty("ownerTeamId")
     private int ownerTeamId;
-    @SerializedName("creatorAccountId")
+    @JsonProperty("creatorAccountId")
     private String creatorAccountId;
 
     public LogItemPickupFromLootBox() {

@@ -1,6 +1,6 @@
 package com.github.gplnature.pubgapi.model.playerseason;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GameModeStats {
 
@@ -8,7 +8,7 @@ public class GameModeStats {
 
     private Integer boosts;
 
-    @SerializedName("dBNOs")
+    @JsonProperty("dBNOs")
     private Integer dbnos;
 
     private Integer dailyKills;

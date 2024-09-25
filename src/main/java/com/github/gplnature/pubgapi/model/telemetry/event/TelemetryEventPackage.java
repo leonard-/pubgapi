@@ -1,14 +1,14 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.ItemPackage;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TelemetryEvent related to a package
  */
 public abstract class TelemetryEventPackage extends TelemetryEvent {
 
-    @SerializedName("itemPackage")
+    @JsonProperty("itemPackage")
     private ItemPackage itemPackage;
 
     public TelemetryEventPackage() {

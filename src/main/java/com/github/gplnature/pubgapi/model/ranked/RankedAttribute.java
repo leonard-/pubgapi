@@ -1,9 +1,9 @@
 package com.github.gplnature.pubgapi.model.ranked;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RankedAttribute {
-    @SerializedName("rankedGameModeStats")
+    @JsonProperty("rankedGameModeStats")
     private RankedGameModeStats stats;
 
     public RankedGameModeStats getStats() {

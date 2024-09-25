@@ -1,46 +1,46 @@
 package com.github.gplnature.pubgapi.model.telemetry.object;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GameState {
 
-    @SerializedName("elapsedTime")
+    @JsonProperty("elapsedTime")
     private Integer elapsedTime;
 
-    @SerializedName("numAliveTeams")
+    @JsonProperty("numAliveTeams")
     private Integer numAliveTeams;
 
-    @SerializedName("numJoinPlayers")
+    @JsonProperty("numJoinPlayers")
     private Integer numJoinPlayers;
 
-    @SerializedName("numStartPlayers")
+    @JsonProperty("numStartPlayers")
     private Integer numStartPlayers;
 
-    @SerializedName("numAlivePlayers")
+    @JsonProperty("numAlivePlayers")
     private Integer numAlivePlayers;
 
-    @SerializedName("safetyZonePosition")
+    @JsonProperty("safetyZonePosition")
     private Location safetyZonePosition;
 
-    @SerializedName("safetyZoneRadius")
+    @JsonProperty("safetyZoneRadius")
     private Float safetyZoneRadius;
 
-    @SerializedName("poisonGasWarningPosition")
+    @JsonProperty("poisonGasWarningPosition")
     private Location poisonGasWarningPosition;
 
-    @SerializedName("poisonGasWarningRadius")
+    @JsonProperty("poisonGasWarningRadius")
     private Float poisonGasWarningRadius;
 
-    @SerializedName("redZonePosition")
+    @JsonProperty("redZonePosition")
     private Location redZonePosition;
 
-    @SerializedName("redZoneRadius")
+    @JsonProperty("redZoneRadius")
     private Float redZoneRadius;
 
-    @SerializedName("blackZonePosition")
+    @JsonProperty("blackZonePosition")
     private Location blackZonePosition;
 
-    @SerializedName("blackZoneRadius")
+    @JsonProperty("blackZoneRadius")
     private Float blackZoneRadius;
 
     public GameState() {

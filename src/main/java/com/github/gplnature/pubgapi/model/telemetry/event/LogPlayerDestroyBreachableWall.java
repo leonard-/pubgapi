@@ -2,14 +2,14 @@ package com.github.gplnature.pubgapi.model.telemetry.event;
 
 import com.github.gplnature.pubgapi.model.telemetry.object.Character;
 import com.github.gplnature.pubgapi.model.telemetry.object.Item;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogPlayerDestroyBreachableWall extends TelemetryEvent {
 
-    @SerializedName("attacker")
+    @JsonProperty("attacker")
     private Character attacker;
 
-    @SerializedName("weapon")
+    @JsonProperty("weapon")
     private Item weapon;
 
     public LogPlayerDestroyBreachableWall() {

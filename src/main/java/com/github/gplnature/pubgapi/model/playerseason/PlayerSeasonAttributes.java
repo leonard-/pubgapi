@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model.playerseason;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PlayerSeasonAttributes {
 
-    @SerializedName("gameModeStats")
+    @JsonProperty("gameModeStats")
     private GameModeStatsWrapper gameModeStatsWrapper;
 
     public PlayerSeasonAttributes() {

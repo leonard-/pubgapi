@@ -1,10 +1,10 @@
 package com.github.gplnature.pubgapi.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogCharacterCarry extends TelemetryEventCharacter {
 
-    @SerializedName("carryState")
+    @JsonProperty("carryState")
     private String carryState;
 
     public LogCharacterCarry() {
