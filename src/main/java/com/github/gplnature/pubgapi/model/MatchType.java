@@ -10,7 +10,8 @@ public enum MatchType {
     @JsonProperty("training") TRAINING("training"),
     @JsonProperty("competitive") COMPETITIVE("competitive"),
     @JsonProperty("airoyale") AIROYALE("airoyale"),
-    @JsonProperty("seasonal") SEASONAL("seasonal");
+    @JsonProperty("seasonal") SEASONAL("seasonal"),
+    @JsonProperty("tutorialatoz") TUTORIALATOZ("tutorialatoz");
 
     private final String text;
 

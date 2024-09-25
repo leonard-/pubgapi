@@ -63,24 +63,23 @@ public class PubgClientTest {
                 .get(0);
     }
 
-    @Test
-    public void testLogMatchEndTelemetry() throws PubgClientException, JsonProcessingException {
-        PubgClient client = new PubgClient();
-
-        Telemetry telemetry = client.getTelemetry("<Telemetry URL>");
-
-        // convert object to json
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
-        mapper.setDefaultPrettyPrinter(new DefaultPrettyPrinter());
-        log.info(() -> {
-            Object[] array = telemetry.getTelemetryEvents().stream().filter(e -> e instanceof LogMatchEnd).toArray();
-            try {
-                return mapper.writeValueAsString(array);
-            } catch (JsonProcessingException e) {
-                throw new RuntimeException(e);
-            }
-        });
-
-    }
+//    @Test
+//    public void testLogMatchEndTelemetry() throws PubgClientException, JsonProcessingException {
+//        PubgClient client = new PubgClient();
+//
+//        Telemetry telemetry = client.getTelemetry("<Telemetry URL>");
+//
+//        // convert object to json
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.registerModule(new JavaTimeModule());
+//        mapper.setDefaultPrettyPrinter(new DefaultPrettyPrinter());
+//        log.info(() -> {
+//            Object[] array = telemetry.getTelemetryEvents().stream().filter(e -> e instanceof LogMatchEnd).toArray();
+//            try {
+//                return mapper.writeValueAsString(array);
+//            } catch (JsonProcessingException e) {
+//                throw new RuntimeException(e);
+//            }
+//        });
+//    }
 }

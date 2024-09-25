@@ -14,4 +14,5 @@ public enum Map {
     @JsonProperty("Chimera_Main") CHIMERA_MAIN,
     @JsonProperty("Heaven_Main") HEAVEN_MAIN,
     @JsonProperty("Tiger_Main") TAEGO_MAIN,
+    @JsonProperty("Tutorial_Main") TUTORIAL_MAIN,
 }
