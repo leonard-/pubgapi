@@ -183,6 +183,7 @@ public abstract class AbstractPubgClient {
         mapper.registerModule(module);
 
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        mapper.configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE, true);
 
         // Build the interface to the API
         Retrofit retrofit = new Retrofit.Builder()

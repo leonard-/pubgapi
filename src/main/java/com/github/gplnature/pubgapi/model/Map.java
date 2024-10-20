@@ -1,6 +1,7 @@
 package com.github.gplnature.pubgapi.model;
 
 
+import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum Map {
@@ -16,4 +17,5 @@ public enum Map {
     @JsonProperty("Tiger_Main") TAEGO_MAIN,
     @JsonProperty("Neon_Main") NEON_MAIN,
     @JsonProperty("Tutorial_Main") TUTORIAL_MAIN,
+    @JsonEnumDefaultValue @JsonProperty("Unknown") UNKNOWN,
 }
