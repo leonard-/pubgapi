@@ -1,6 +1,7 @@
 package com.github.gplnature.pubgapi.model;
 
 
+import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public enum GameMode {
@@ -42,7 +43,10 @@ public enum GameMode {
     @JsonProperty("zombie-squad-fpp") ZOMBIE_SQUAD_FPP("zombie-squad-fpp"),
     @JsonProperty("lab") LAB("lab"),
     @JsonProperty("lab-fpp") LAB_FPP("lab-fpp"),
-    @JsonProperty("tdm") TEAM_DEATHMATCH("tdm");
+    @JsonProperty("tdm") TEAM_DEATHMATCH("tdm"),
+    @JsonProperty("slbhell-fpp") SLBHELL_FPP("slbhell-fpp"),
+    @JsonProperty("landmark") LANDMARK("landmark"),
+    @JsonEnumDefaultValue @JsonProperty("Unknown") UNKNOWN("unknown");
 
     private final String text;
 
