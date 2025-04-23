@@ -39,11 +39,21 @@ public class RetrofitUtil {
 
     private static <T> T getBody(Response<T> response) throws PubgClientException {
         if (!response.isSuccessful()) {
-            throw new PubgClientException(response.message());
+            String errorMessage = "HTTP " + response.code();
+
+            try {
+                if (response.errorBody() != null) {
+                    errorMessage += ": " + response.errorBody().string();
+                }
+            } catch (IOException e) {
+                errorMessage += ": [error reading error body]";
+            }
+
+            throw new PubgClientException(errorMessage, response.code());
         }
 
         if (response.body() == null) {
-            throw new PubgClientException("Empty body");
+            throw new PubgClientException("Empty body", response.code());
         }
 
         return response.body();
