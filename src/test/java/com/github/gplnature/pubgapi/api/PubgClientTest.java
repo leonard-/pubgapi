@@ -1,9 +1,5 @@
 package com.github.gplnature.pubgapi.api;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.gplnature.pubgapi.exception.PubgClientException;
 import com.github.gplnature.pubgapi.model.ExtendedPlatform;
 import com.github.gplnature.pubgapi.model.Platform;
@@ -12,7 +8,6 @@ import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.sample.Sample;
 import com.github.gplnature.pubgapi.model.telemetry.Telemetry;
-import com.github.gplnature.pubgapi.model.telemetry.event.LogMatchEnd;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
@@ -20,7 +15,6 @@ import org.junit.platform.commons.logging.LoggerFactory;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
