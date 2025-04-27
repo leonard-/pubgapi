@@ -17,5 +17,6 @@ public enum Map {
     @JsonProperty("Tiger_Main") TAEGO_MAIN,
     @JsonProperty("Neon_Main") NEON_MAIN,
     @JsonProperty("Tutorial_Main") TUTORIAL_MAIN,
+    @JsonProperty("Kiki_Main") KIKI_MAIN,
     @JsonEnumDefaultValue @JsonProperty("Unknown") UNKNOWN,
 }
