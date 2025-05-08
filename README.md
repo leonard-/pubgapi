@@ -2,7 +2,7 @@
 Java wrapper for the PlayerUnknown's Battlegrounds (PUBG) API.
 
 # Contact Me
-- [Discord] GPL_Nature#5497
+- [Discord] bloody_matcha_latte
 - [Discord Server] https://discord.gg/A8Htj94  (For Update Notice)
 
 # Overview
