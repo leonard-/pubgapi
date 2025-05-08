@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SeasonAttributes {
 
+    @JsonProperty("isCurrentSeason")
     private Boolean isCurrentSeason;
 
     @JsonProperty("isOffseason")
