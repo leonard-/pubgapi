@@ -28,7 +28,7 @@ public class RosterUtils {
         }
 
         List<Participant> participants = rosterRelationships.getParticipants();
-        if (participants == null || participants == null) {
+        if (participants == null) {
             throw new PubgClientException("Unable to get the participants of the roster");
         }
 
