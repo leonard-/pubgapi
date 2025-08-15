@@ -30,12 +30,12 @@ public class PlayerUtils {
             throw new PubgClientException("Unable to get the relationships of the player");
         }
 
-        List<Entity> matchs = playerRelationships.getMatches();
-        if (matchs == null || matchs == null) {
-            throw new PubgClientException("Unable to get the matchs of the player");
+        List<Entity> matches = playerRelationships.getMatches();
+        if (matches == null) {
+            throw new PubgClientException("Unable to get the matches of the player");
         }
 
-        return matchs.stream()
+        return matches.stream()
                 .map(Entity::getId)
                 .collect(Collectors.toList());
     }
