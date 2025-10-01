@@ -1,11 +1,6 @@
 package com.github.gplnature.pubgapi.model.player;
 
-import java.time.ZonedDateTime;
-
 public class PlayerAttributes {
-
-    @Deprecated
-    private ZonedDateTime createdAt;
 
     private String name;
 
@@ -18,11 +13,6 @@ public class PlayerAttributes {
     private String titleId;
 
     public PlayerAttributes() {
-    }
-
-    @Deprecated
-    public ZonedDateTime getCreatedAt() {
-        return createdAt;
     }
 
     public String getName() {

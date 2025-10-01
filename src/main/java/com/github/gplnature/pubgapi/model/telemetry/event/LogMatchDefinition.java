@@ -11,21 +11,8 @@ public class LogMatchDefinition extends TelemetryEvent {
     @JsonProperty("SeasonState")
     private SeasonState seasonState;
 
-    // Deprecated base on pubg api
-    @Deprecated
-    @JsonProperty("PingQuality")
-    private String pingQuality;
-
     public LogMatchDefinition() {
         super();
-    }
-
-    public String getPingQuality() {
-        return pingQuality;
-    }
-
-    public void setPingQuality(String pingQuality) {
-        this.pingQuality = pingQuality;
     }
 
     public String getMatchId() {

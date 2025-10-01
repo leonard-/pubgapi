@@ -8,17 +8,11 @@ public class LeaderboardPlayerAttributesStats {
 
     private Integer games;
 
-    @Deprecated
-    private Double winRatio;
-
     private Double kda;
 
     private Integer averageDamage;
 
     private Integer kills;
-
-    @Deprecated
-    private Double killDeathRatio;
 
     private String tier;
 
@@ -63,11 +57,6 @@ public class LeaderboardPlayerAttributesStats {
         this.games = games;
     }
 
-    @Deprecated
-    public Double getWinRatio() {
-        return winRatio;
-    }
-
     public Integer getAverageDamage() {
         return averageDamage;
     }
@@ -84,8 +73,4 @@ public class LeaderboardPlayerAttributesStats {
         this.kills = kills;
     }
 
-    @Deprecated
-    public Double getKillDeathRatio() {
-        return killDeathRatio;
-    }
 }
