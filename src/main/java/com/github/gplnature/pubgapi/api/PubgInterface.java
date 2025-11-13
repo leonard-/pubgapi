@@ -2,6 +2,7 @@ package com.github.gplnature.pubgapi.api;
 
 import com.github.gplnature.pubgapi.holders.DataHolder;
 import com.github.gplnature.pubgapi.holders.DataListHolder;
+import com.github.gplnature.pubgapi.model.clan.Clan;
 import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.player.Player;
@@ -14,7 +15,11 @@ import com.github.gplnature.pubgapi.model.telemetry.event.TelemetryEvent;
 import com.github.gplnature.pubgapi.model.tournament.Tournament;
 import com.github.gplnature.pubgapi.model.weapon.WeaponMastery;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 import java.time.Instant;
 import java.util.List;
@@ -36,6 +41,10 @@ public interface PubgInterface {
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}")
     Call<DataHolder<Player>> getPlayer(@Path("shard") String shard, @Path("id") String id);
+
+    @Headers("@: Auth")
+    @GET("/shards/{shard}/clans/{id}")
+    Call<DataHolder<Clan>> getClan(@Path("shard") String shard, @Path("id") String id);
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}/weapon_mastery")

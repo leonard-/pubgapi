@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.gplnature.pubgapi.model.asset.Asset;
+import com.github.gplnature.pubgapi.model.clan.Clan;
 import com.github.gplnature.pubgapi.model.generic.Entity;
 import com.github.gplnature.pubgapi.model.match.Match;
 import com.github.gplnature.pubgapi.model.participant.Participant;
@@ -144,6 +145,8 @@ public abstract class AbstractPubgClient {
                 switch (type) {
                     case "player":
                         return p.getCodec().treeToValue(node, Player.class);
+                    case "clan":
+                        return p.getCodec().treeToValue(node, Clan.class);
                     case "match":
                         return p.getCodec().treeToValue(node, Match.class);
                     case "status":
