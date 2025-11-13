@@ -17,6 +17,8 @@ public class PlayerAttributes {
 
     private String titleId;
 
+    private String clanId;
+
     public PlayerAttributes() {
     }
 
@@ -63,5 +65,13 @@ public class PlayerAttributes {
 
     public void setBanType(String banType) {
         this.banType = banType;
+    }
+
+    public String getClanId() {
+        return clanId;
+    }
+
+    public void setClanId(String clanId) {
+        this.clanId = clanId;
     }
 }
