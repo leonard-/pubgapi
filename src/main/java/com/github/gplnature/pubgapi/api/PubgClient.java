@@ -3,6 +3,7 @@ package com.github.gplnature.pubgapi.api;
 import com.github.gplnature.pubgapi.exception.PubgClientException;
 import com.github.gplnature.pubgapi.holders.DataHolder;
 import com.github.gplnature.pubgapi.model.*;
+import com.github.gplnature.pubgapi.model.clan.Clan;
 import com.github.gplnature.pubgapi.model.leaderboard.Leaderboard;
 import com.github.gplnature.pubgapi.model.match.MatchResponse;
 import com.github.gplnature.pubgapi.model.player.Player;
@@ -71,6 +72,18 @@ public class PubgClient extends AbstractPubgClient {
      */
     public Player getPlayer(MiddlePlatform platform, String id) throws PubgClientException {
         return RetrofitUtil.getResponse(pubgInterface.getPlayer(platform.toString(), id)).getData();
+    }
+
+    /**
+     * Get a Clan by ID and platform
+     *
+     * @param platform Platform (example: Platform.STEAM)
+     * @param id       PUBG Clan ID
+     * @return Clan by id
+     * @throws com.github.gplnature.pubgapi.exception.PubgClientException
+     */
+    public Clan getClan(MiddlePlatform platform, String id) throws PubgClientException {
+        return RetrofitUtil.getResponse(pubgInterface.getClan(platform.toString(), id)).getData();
     }
 
     /**
