@@ -91,7 +91,7 @@ public class MatchResponseUtils {
         }
 
         // The asset containing the id of the telemetry asset
-        Asset asset = assets.get(0);
+        Asset asset = assets.getFirst();
         String telemetryAssetId = asset.getId();
         if (telemetryAssetId == null) {
             throw new PubgClientException("The telemetry doesn't have an Id");

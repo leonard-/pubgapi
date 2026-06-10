@@ -130,7 +130,7 @@ public abstract class AbstractPubgClient {
         });
 
         // Custom serializer for Instant
-        module.addSerializer(Instant.class, new ValueSerializer<Instant>() {
+        module.addSerializer(Instant.class, new ValueSerializer<>() {
             @Override
             public void serialize(Instant value, JsonGenerator gen, SerializationContext serializers) {
                 gen.writeString(DateTimeFormatter.ISO_INSTANT.format(value));

@@ -31,12 +31,12 @@ public interface PubgInterface {
     @Headers("@: Auth")
     @GET("/shards/{shard}/players")
     Call<DataListHolder<Player>> getPlayersByNames(@Path("shard") String shard,
-                                                           @Query("filter[playerNames]") String playerNames);
+                                                   @Query("filter[playerNames]") String playerNames);
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players")
     Call<DataListHolder<Player>> getPlayersByIds(@Path("shard") String shard,
-                                                         @Query("filter[playerIds]") String playerIds);
+                                                 @Query("filter[playerIds]") String playerIds);
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}")
@@ -52,18 +52,21 @@ public interface PubgInterface {
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}/seasons/{seasonId}")
-    Call<DataHolder<PlayerSeason>> getPlayerSeason(@Path("shard") String shard, @Path("id") String playerId,
-                                                           @Path("seasonId") String seasonId);
+    Call<DataHolder<PlayerSeason>> getPlayerSeason(@Path("shard") String shard,
+                                                   @Path("id") String playerId,
+                                                   @Path("seasonId") String seasonId);
 
     @Headers("@: Auth")
     @GET("/shards/{shard}/players/{id}/seasons/{seasonId}/ranked")
-    Call<DataHolder<RankedData>> getPlayerRanked(@Path("shard") String shard, @Path("id") String playerId,
+    Call<DataHolder<RankedData>> getPlayerRanked(@Path("shard") String shard,
+                                                 @Path("id") String playerId,
                                                  @Path("seasonId") String seasonId);
-    
+
     @Headers("@: Auth")
     @GET("/shards/{shard}/seasons/{seasonId}/gameMode/{gameMode}/players")
-    Call<DataHolder<PlayerSeason>> getSeasonPlayers(@Path("shard") String shard, @Path("gameMode") String gameMode,
-                                                           @Path("seasonId") String seasonId);
+    Call<DataHolder<PlayerSeason>> getSeasonPlayers(@Path("shard") String shard,
+                                                    @Path("gameMode") String gameMode,
+                                                    @Path("seasonId") String seasonId);
 
     @GET("/status")
     Call<DataHolder<Status>> getStatus();
