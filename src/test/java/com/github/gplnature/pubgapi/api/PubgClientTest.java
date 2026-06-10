@@ -19,9 +19,9 @@ import java.time.temporal.ChronoUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("SmokeTest")
-public class PubgClientTest {
-    private Logger log = LoggerFactory.getLogger(PubgClientTest.class);
+class PubgClientTest {
 
+    private final Logger log = LoggerFactory.getLogger(PubgClientTest.class);
 
     @Test
     void testParsingTelemetryApiUsingMatchSamples() throws PubgClientException {
@@ -29,14 +29,14 @@ public class PubgClientTest {
 
         // look for sample matches that where started around 6pm UTC
         Instant eveningTwoDaysAgo = Instant.now().truncatedTo(ChronoUnit.DAYS)
-            .minus(1, ChronoUnit.DAYS)
-            .minus(6, ChronoUnit.HOURS);
+                .minus(1, ChronoUnit.DAYS)
+                .minus(6, ChronoUnit.HOURS);
 
         Sample sample = client.getSamples(Platform.CONSOLE, eveningTwoDaysAgo);
 
-        Match matchStub = sample.getSampleRelationships().getMatches().get(0);
+        Match matchStub = sample.getSampleRelationships().getMatches().getFirst();
         MatchResponse matchResponse = client.getMatch(ExtendedPlatform.XBOX, matchStub.getId());
-        Asset assetStub = matchResponse.getData().getRelationships().getAssets().get(0);
+        Asset assetStub = matchResponse.getData().getRelationships().getAssets().getFirst();
         Asset asset = findAsset(matchResponse, assetStub);
 
         Telemetry telemetry = client.getTelemetry(asset.getAttributes().getUrl());
@@ -54,24 +54,28 @@ public class PubgClientTest {
                 .stream()
                 .filter(i -> i.getId().equals(assetStub.getId()) && i.getType().equals(assetStub.getType()))
                 .toList()
-                .get(0);
+                .getFirst();
     }
 
 //    @Test
-//    public void testLogMatchEndTelemetry() throws PubgClientException, JsonProcessingException {
+//    void testLogMatchEndTelemetry() throws PubgClientException, JacksonException {
 //        PubgClient client = new PubgClient();
 //
 //        Telemetry telemetry = client.getTelemetry("<Telemetry URL>");
 //
-//        // convert object to json
-//        ObjectMapper mapper = new ObjectMapper();
-//        mapper.registerModule(new JavaTimeModule());
-//        mapper.setDefaultPrettyPrinter(new DefaultPrettyPrinter());
+//        ObjectMapper mapper = JsonMapper.builder().build();
+//
 //        log.info(() -> {
-//            Object[] array = telemetry.getTelemetryEvents().stream().filter(e -> e instanceof LogMatchEnd).toArray();
+//            Object[] array = telemetry.getTelemetryEvents()
+//                    .stream()
+//                    .filter(LogMatchEnd.class::isInstance)
+//                    .toArray();
+//
 //            try {
-//                return mapper.writeValueAsString(array);
-//            } catch (JsonProcessingException e) {
+//                return mapper
+//                        .writerWithDefaultPrettyPrinter()
+//                        .writeValueAsString(array);
+//            } catch (JacksonException e) {
 //                throw new RuntimeException(e);
 //            }
 //        });
